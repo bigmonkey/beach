@@ -1,0 +1,44 @@
+// Variables
+$pageBackground: #fff;
+$mainColor: #666;
+
+/*limited reset*/
+html, body, div, section, article, aside, header, hgroup, footer,nav , h1, h2, h3, h4, h5, h6, p, blockquote, address, time, span, em, strong, img, ol, ul, li, q, figure, canvas, video, th, td, tr, form {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align:baseline;
+	font: inherit;
+}
+
+/*html5 display rule*/
+address, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, nav, menu, section, summary {
+	display: block;
+}
+
+// main tag settings
+
+html, body{
+    height: 100%;
+    background: $pageBackground;
+}
+
+body {
+	font-family: 'Muli', Helvetica, Arial, sans-serif;
+	color: $mainColor;
+}
+
+#content{
+	margin: 0px 15%;
+}
+
+.temp{
+	margin: 20% auto;
+	text-align: center;
+
+	h1 {
+	font-size: 2em;
+	color: #2B2D9E;
+	margin-bottom: .5em;
+	}
+}
