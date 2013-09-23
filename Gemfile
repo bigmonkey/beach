@@ -27,6 +27,7 @@ gem 'turbolinks', '1.3.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '1.5.0'
 
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -43,8 +44,27 @@ gem 'unicorn','4.6.3'
 gem "execjs", "~> 1.4.0"
 gem 'therubyracer', :platform => 'ruby'
 
+# Add CMS
+gem 'comfortable_mexican_sofa', '~> 1.9.0'
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+group :development, :test do
+  gem 'rspec-rails', '~> 2.13.1'
+  gem "factory_girl_rails", "~> 4.2.1"  
+  gem 'spork-rails', '4.0.0'
+  gem 'guard-spork', '1.5.0'
+  gem 'childprocess', '0.3.6'   
+end
+
+group :test do
+  gem 'selenium-webdriver', '2.35.1'
+  gem 'capybara', '2.1.0' 
+  gem "shoulda-matchers", "~> 2.4.0"
+
+  gem 'cucumber-rails', '1.4.0', :require => false
+  gem 'database_cleaner', github: 'bmabey/database_cleaner'  
+end
