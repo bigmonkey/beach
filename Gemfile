@@ -46,6 +46,10 @@ gem 'therubyracer', :platform => 'ruby'
 
 # Add CMS
 gem 'comfortable_mexican_sofa', '~> 1.9.0'
+
+# Used to add trailing slash in config/application.rb
+gem "rack-rewrite", "~> 1.4.01"
+
 # Use Capistrano for deployment
 # gem 'capistrano', group: :development
 
