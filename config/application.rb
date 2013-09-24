@@ -25,7 +25,7 @@ module Beach
     
     # Adds a trailing slash to all none-filenames.
     config.middleware.insert_before(Rack::Runtime, Rack::Rewrite) do
-      r301 %r{^([^.]*[^/])$}, '$1/' 
+      r301 %r{^/(.*)/$}, '/$1' 
     end
   end  
 end
