@@ -45,9 +45,35 @@ header {
 }
 
 section {
-  margin: 4% 10%;
+  margin: 2% 10%;
   height: 100%;
 }
+
+h1 {
+	font-size: 1.3em;
+	color: $highlightColor;
+	margin-bottom: .5em;
+}
+
+h2 {
+	color: $highlightColor;
+	margin-bottom: .5em;
+}
+
+p {
+	margin-bottom: 1em;
+}
+
+ul {
+	list-style-position: outside;
+	margin: 0 0 1em 2em;
+}
+
+ol {
+	list-style-position: outside;
+	margin: 0 0 1em 2em;
+}
+
 
 .clearboth {
 	clear: both;
@@ -58,6 +84,8 @@ section {
     direction: rtl;
     unicode-bidi: bidi-override;
 }
+
+// ********* end main tag settings *****
 
 
 //  ****** logo and header styles *******
@@ -86,7 +114,11 @@ section {
   line-height: 1.3em;
   .beachside {
   	padding-top: 1.4em;
-  	font-size: 2em
+  	font-size: 2em;
+  	a, a:hover, a:visited {
+  		text-decoration: none;
+  		color:$logoColor;
+  	}
   }
   .hutch {font-size: 0.75em}
 }
@@ -100,7 +132,7 @@ section {
 }
 }
 
-
+// ************ end logo and header *********
 
 // ***************** menu  ***************
 .menuLine{
@@ -223,3 +255,9 @@ nav {
 #center #center-nav, #programs #programs-nav, #about-us #about-us-nav, #contact #contact-nav {
 	text-decoration: underline;
 } 
+
+// ************ end menu ****************
+
+// ************ CMS ***********
+
+// *********** end CMS *******

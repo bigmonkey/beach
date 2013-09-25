@@ -25,7 +25,7 @@
 	<header>
 		<div class = "headIntro">
 			<div class = "headPhone">
-				<div class = "headNum">(800)123-5678</div>
+				<div class = "headNum"><%= cms_snippet_content(:telephone) %></div>
 				<div class = "headHour">24 hours</div>
 			</div>
 			<div class = "headDesc">
@@ -33,7 +33,7 @@
  				<div>Center</div>
 			</div>
 			<div class = "headLogo">
-				<div class = "beachside">beachside</div>
+				<div class = "beachside"><%= link_to 'beachside', root_path %> </div>
 				<div class = "hutch">Hutchinson Island, Florida</div>
 			</div>
 		</div>
