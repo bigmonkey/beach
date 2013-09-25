@@ -9,7 +9,10 @@
 
 	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
 	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	
+	<%# add google fonts %>
 	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans'>
+	<link href='http://fonts.googleapis.com/css?family=Kameron:400,700' rel='stylesheet' type='text/css'>	
 	<%= csrf_meta_tags %>
 
   <!--[if lt IE 9]>
@@ -20,37 +23,38 @@
 
 <body id = "<%= cms_page_content(:navId)%>">
 	<header>
-		<div>
+		<div class = "headIntro">
 			<div class = "headPhone">
 				<div class = "headNum">(800)123-5678</div>
 				<div class = "headHour">24 hours</div>
 			</div>
 			<div class = "headDesc">
- 				<div>Rehab and Detox</div>
+ 				<div class = "rehab">Rehab and Detox</div>
  				<div>Center</div>
 			</div>
 			<div class = "headLogo">
-				<div>beachside</div>
-				<div>Hutchinson Island, Florida</div>
+				<div class = "beachside">beachside</div>
+				<div class = "hutch">Hutchinson Island, Florida</div>
 			</div>
-
 		</div>
-		<div class = "clearboth"></div>
-		<ul id = "menu">
-			<% @cms_site.pages.root.children.published.each do |page| %>
-				<li><%= link_to page.label, page.full_path %>
-				<% if page.children_count > 0 %>		
-					<ul>
-						<% @cms_site.pages.published.each do |subpage| %>
-							<% if (subpage.parent_id == page.id) %>
-								<li><%= link_to subpage.label, subpage.full_path %></li>
-							<% end %>	
-						<% end %>
-					</ul>
-				<% end%>
-				</li>
-			<% end %>	
-		</ul>
+		<div class = "menuLine"></div>
+		<nav>
+			<ul id = "menu">
+				<% @cms_site.pages.root.children.published.each do |page| %>
+					<li><%= link_to page.label, page.full_path %>
+					<% if page.children_count > 0 %>		
+						<ul>
+							<% @cms_site.pages.published.each do |subpage| %>
+								<% if (subpage.parent_id == page.id) %>
+									<li><%= link_to subpage.label, subpage.full_path %></li>
+								<% end %>	
+							<% end %>
+						</ul>
+					<% end%>
+					</li>
+				<% end %>	
+			</ul>
+		</nav>
 	</header>
 
 	<section>	

@@ -1,7 +1,16 @@
 // Variables
 $pageBackground: #fff;
 $mainColor: #666;
-$highlightColor: #5481bd;
+$highlightColor: #00267d;
+$lightGrey: #eee;
+$logoColor: #646054;
+
+// sets rounded corners for most browsers use @include rounded (radius)
+@mixin rounded($radius) {
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
 
 /*limited reset*/
 * {
@@ -36,7 +45,7 @@ body {
 }
 
 header {
-  padding-top: 3%;
+  padding-top: 2%;
   margin: 0 10%;
 }
 
@@ -51,22 +60,38 @@ section {
 
 // logo and header styles 
 
+.headIntro {
+	font-family: 'Kameron', serif;
+}
+
 .headDesc, .headPhone {
 	text-align: center;	
-	font-size: 1.7em;
-	line-height: 1.2em;
+	opacity: 0.7;
+	font-size: 1.6em;
+	line-height: 1.1em;
 	color: $highlightColor;
 } 
 
 .headDesc{
 	float: left;
+	.rehab { padding-top: 1.3em;}
 }
 .headLogo {
 	text-align: center;
+	color: $logoColor;
+  background: url( asset-path("blank-logo.png", image) ) center no-repeat;
+  height: 6em;	
+  line-height: 1.3em;
+  .beachside {
+  	padding-top: 1.4em;
+  	font-size: 2em
+  }
+  .hutch {font-size: 0.75em}
 }
 
 .headPhone {
 	float: right;
+	.headNum{ padding-top: 1.3em;}
 	.headHour {
 		font-size: .6em;
 		line-height: 1.1em;
@@ -76,48 +101,50 @@ section {
 
 
 /* Main */
+.menuLine{
+	clear: both;
+	border-bottom: .25em solid $highlightColor;
+	margin-bottom: -1.15em;
+	margin-top: 1.5em;
+}
+
+nav {
+	clear: both;
+	text-align: center;
+}
+
 #menu{
-	width: 100%;
 	margin: 0;
-	padding: 10px 0 0 0;
-	list-style: none;  
-	background: #111;
-	background: -moz-linear-gradient(#444, #111); 
-        background: -webkit-gradient(linear,left bottom,left top,color-stop(0, #111),color-stop(1, #444));	
-	background: -webkit-linear-gradient(#444, #111);	
-	background: -o-linear-gradient(#444, #111);
-	background: -ms-linear-gradient(#444, #111);
-	background: linear-gradient(#444, #111);
-	-moz-border-radius: 50px;
-	border-radius: 50px;
-	-moz-box-shadow: 0 2px 1px #9c9c9c;
-	-webkit-box-shadow: 0 2px 1px #9c9c9c;
-	box-shadow: 0 2px 1px #9c9c9c;
+	padding: 0;
+	list-style: none;
+	display: inline-block;
+	background-color: $pageBackground;	
 }
 
 #menu li{
 	float: left;
-	padding: 0 0 10px 0;
+	text-align: left;
+	padding: 0 0 0 0;
 	position: relative;
 }
 
 #menu a{
-	float: left;
-	height: 25px;
-	padding: 0 25px;
-	color: #999;
+	line-height: 2em;
+	padding: 0 2em;
+	color: $highlightColor;
 	text-transform: uppercase;
-	font: bold 12px/25px Arial, Helvetica;
 	text-decoration: none;
-	text-shadow: 0 1px 0 #000;
 }
 
 #menu li:hover > a{
-	color: #fafafa;
+	text-decoration: none;
+	background: $lightGrey;
+	@include rounded(.3em);
 }
 
 #menu li:hover > ul{
 	display: block;
+
 }
 
 /* Sub-menu */
@@ -128,18 +155,11 @@ section {
     padding: 0;    
     display: none;
     position: absolute;
-    top: 35px;
     left: 0;
-    z-index: 99999;    
-    background: #444;
-    background: -moz-linear-gradient(#444, #111);
-    background: -webkit-gradient(linear,left bottom,left top,color-stop(0, #111),color-stop(1, #444));
-    background: -webkit-linear-gradient(#444, #111);    
-    background: -o-linear-gradient(#444, #111);	
-    background: -ms-linear-gradient(#444, #111);	
-    background: linear-gradient(#444, #111);	
-    -moz-border-radius: 5px;
-    border-radius: 5px;
+    z-index: 99999;   
+    background: $lightGrey; 
+		top:2em;
+    @include rounded (.5em)
 }
 
 #menu ul li{
@@ -147,15 +167,6 @@ section {
     margin: 0;
     padding: 0;
     display: block;  
-    -moz-box-shadow: 0 1px 0 #111111, 0 2px 0 #777777;
-    -webkit-box-shadow: 0 1px 0 #111111, 0 2px 0 #777777;
-    box-shadow: 0 1px 0 #111111, 0 2px 0 #777777;
-}
-
-#menu ul li:last-child{   
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;    
 }
 
 #menu ul a{    
@@ -175,13 +186,8 @@ section {
 }
 
 #menu ul a:hover{
-        background: #0186ba;
-	background: -moz-linear-gradient(#04acec,  #0186ba);	
-	background: -webkit-gradient(linear, left top, left bottom, from(#04acec), to(#0186ba));
-	background: -webkit-linear-gradient(#04acec,  #0186ba);
-	background: -o-linear-gradient(#04acec,  #0186ba);
-	background: -ms-linear-gradient(#04acec,  #0186ba);
-	background: linear-gradient(#04acec,  #0186ba);
+  background: $highlightColor;
+  color: white;
 }
 
 #menu ul li:first-child a{
@@ -193,17 +199,17 @@ section {
 #menu ul li:first-child a:after{
     content: '';
     position: absolute;
-    left: 30px;
-    top: -8px;
+    left: 2em;
+    top: -0.3em;
     width: 0;
     height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-bottom: 8px solid #444;
+    border-left: .4em solid transparent;
+    border-right: .4em solid transparent;
+    border-bottom: .5em solid $lightGrey;
 }
 
 #menu ul li:first-child a:hover:after{
-    border-bottom-color: #04acec; 
+    border-bottom-color: $highlightColor; 
 }
 
 #menu ul li:last-child a{
