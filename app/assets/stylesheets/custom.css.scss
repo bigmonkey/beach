@@ -26,7 +26,7 @@ address, article, aside, canvas, details, figcaption, figure, footer, header, hg
 	display: block;
 }
 
-// main tag settings
+// ********** main tag settings
 
 html, body, section{
     height: 100%;
@@ -38,11 +38,6 @@ body {
 	color: $mainColor;
 }
 
-/* for email addresses. reverse and unicode */
-.code {
-    direction: rtl;
-    unicode-bidi: bidi-override;
-}
 
 header {
   padding-top: 2%;
@@ -58,7 +53,14 @@ section {
 	clear: both;
 }
 
-// logo and header styles 
+// for email addresses. reverse and unicode 
+.code {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+}
+
+
+//  ****** logo and header styles *******
 
 .headIntro {
 	font-family: 'Kameron', serif;
@@ -100,10 +102,10 @@ section {
 
 
 
-/* Main */
+// ***************** menu  ***************
 .menuLine{
 	clear: both;
-	border-bottom: .25em solid $highlightColor;
+	border-bottom: .2em solid $highlightColor;
 	margin-bottom: -1.15em;
 	margin-top: 1.5em;
 }
@@ -111,6 +113,7 @@ section {
 nav {
 	clear: both;
 	text-align: center;
+	font-size: .95em;
 }
 
 #menu{
@@ -196,22 +199,6 @@ nav {
     border-radius: 5px 5px 0 0;
 }
 
-#menu ul li:first-child a:after{
-    content: '';
-    position: absolute;
-    left: 2em;
-    top: -0.3em;
-    width: 0;
-    height: 0;
-    border-left: .4em solid transparent;
-    border-right: .4em solid transparent;
-    border-bottom: .5em solid $lightGrey;
-}
-
-#menu ul li:first-child a:hover:after{
-    border-bottom-color: $highlightColor; 
-}
-
 #menu ul li:last-child a{
     -moz-border-radius: 0 0 5px 5px;
     -webkit-border-radius: 0 0 5px 5px;
@@ -230,3 +217,9 @@ nav {
 
 
 *:first-child+html #menu { zoom: 1; } /* IE7 */
+
+// highlights menu navigation for selected page
+
+#center #center-nav, #programs #programs-nav, #about-us #about-us-nav, #contact #contact-nav {
+	text-decoration: underline;
+} 

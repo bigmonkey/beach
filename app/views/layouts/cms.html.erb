@@ -41,7 +41,7 @@
 		<nav>
 			<ul id = "menu">
 				<% @cms_site.pages.root.children.published.each do |page| %>
-					<li><%= link_to page.label, page.full_path %>
+					<li><%= link_to page.label, page.full_path, id: page.slug+"-nav" %>
 					<% if page.children_count > 0 %>		
 						<ul>
 							<% @cms_site.pages.published.each do |subpage| %>
