@@ -56,6 +56,8 @@ Beach::Application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  
   # Make sure this routeset is defined last
     ComfortableMexicanSofa::Routing.content(:path => '/', :sitemap => false)
   

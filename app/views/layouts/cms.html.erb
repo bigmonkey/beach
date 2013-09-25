@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title><%= cms_page_content(:title)%></title>
+  <meta name="description" content="<%= cms_page_content(:description)%>">
+
+	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans'>
+	<%= csrf_meta_tags %>
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</head>
+
+<body id = "<%= cms_page_content(:navId)%>">
+	<header>
+		<div>
+			<div class = "headPhone">
+				<div class = "headNum">(800)123-5678</div>
+				<div class = "headHour">24 hours</div>
+			</div>
+			<div class = "headDesc">
+ 				<div>Rehab and Detox</div>
+ 				<div>Center</div>
+			</div>
+			<div class = "headLogo">
+				<div>beachside</div>
+				<div>Hutchinson Island, Florida</div>
+			</div>
+
+		</div>
+		<div class = "clearboth"></div>
+		<ul id = "menu">
+			<% @cms_site.pages.root.children.published.each do |page| %>
+				<li><%= link_to page.label, page.full_path %>
+				<% if page.children_count > 0 %>		
+					<ul>
+						<% @cms_site.pages.published.each do |subpage| %>
+							<% if (subpage.parent_id == page.id) %>
+								<li><%= link_to subpage.label, subpage.full_path %></li>
+							<% end %>	
+						<% end %>
+					</ul>
+				<% end%>
+				</li>
+			<% end %>	
+		</ul>
+	</header>
+
+	<section>	
+			<%= yield %>
+	</section>
+</body>
+</html>
