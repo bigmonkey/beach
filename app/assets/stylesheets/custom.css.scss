@@ -36,8 +36,9 @@ body {
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 	background: $pageBackground;
 	color: $mainColor;
+	max-width: 1300px;
+	margin: 0 auto;	
 }
-
 
 header {
   padding-top: 2%;
@@ -153,6 +154,10 @@ nav {
 	padding: 0;
 	list-style: none;
 	display: inline-block;
+		
+}
+
+.cms #menu {
 	background-color: $pageBackground;	
 }
 
@@ -165,10 +170,18 @@ nav {
 
 #menu a{
 	line-height: 2em;
-	padding: 0 2em;
+	padding: 0 2em;		
+	text-decoration: none;
+}
+
+.cms #menu a {
 	color: $highlightColor;
 	text-transform: uppercase;
-	text-decoration: none;
+}
+
+.homepage #menu a {
+	color: $logoColor;
+	text-transform: lowercase;
 }
 
 #menu li:hover > a{
@@ -185,46 +198,56 @@ nav {
 /* Sub-menu */
 
 #menu ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;    
-    display: none;
-    position: absolute;
-    left: 0;
-    z-index: 99999;   
-    background: $lightGrey; 
-		top:2em;
-    @include rounded (.5em)
+  list-style: none;
+  margin: 0;
+  padding: 0;    
+  display: none;
+  position: absolute;
+  left: 0;
+  z-index: 99999;   
+  background: $lightGrey; 
+	top:2em;
+  @include rounded (.5em)
 }
 
 #menu ul li{
-    float: none;
-    margin: 0;
-    padding: 0;
-    display: block;  
+  float: none;
+  margin: 0;
+  padding: 0;
+  display: block;  
 }
 
 #menu ul a{    
-    padding: 10px;
-    height: auto;
-    line-height: 1;
-    display: block;
-    white-space: nowrap;
-    float: none;
-    text-transform: none;
+  height: auto;
+  padding: 10px;  
+  line-height: 1;
+  display: block;
+  white-space: nowrap;
+  float: none;
 }
 
+.cms #menu ul a {
+	text-transform: none;
+}
+
+.homepage #menu ul a {
+	text-transform: none;
+}
 
 *:first-child+html #menu ul a{ /* IE7 */    
 	height: 10px;
 	width: 150px;
 }
 
-#menu ul a:hover{
+.cms #menu ul a:hover{
   background: $highlightColor;
   color: white;
 }
 
+.homepage #menu ul a:hover{
+  background: $logoColor;
+  color: white;
+}
 #menu ul li:first-child a{
     -moz-border-radius: 5px 5px 0 0;
     -webkit-border-radius: 5px 5px 0 0;
@@ -258,6 +281,58 @@ nav {
 
 // ************ end menu ****************
 
-// ************ CMS ***********
+// ************ homepage  ***********
+.homepage {
+  background: url(asset-path("beachside-rehab.jpg", image) ) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;	
+}
 
-// *********** end CMS *******
+.homeNav {
+	padding-top: 2em;
+
+}
+.homeContentBox {
+	background: $pageBackground;
+	opacity: .5;
+	height: 20em;
+	margin: 10% 20%;
+	
+}
+.homeContent {
+	position: relative;
+	margin: 0 20%;
+	text-align: center;	
+	top: -22em;
+	h1 {
+		font-family: 'Kameron', serif;
+		color: $logoColor;
+	 	font-size: 3em;
+	 	margin-bottom: 0em;
+	 	a, a:hover, a:visited {
+	 		text-decoration: none;
+	 		color: $logoColor;
+	 	}
+	}
+	.homePhone {
+		margin-top: 1em;
+	}
+	.homePhone a {
+		font-family: 'Kameron', serif;
+		color: $logoColor;
+		font-size: 2.5em;
+		text-decoration: none;
+	}
+	.homeLocation a, .homeLocation a:hover,.homeLocation a:visited, {
+		color: $mainColor;
+		text-decoration: none;
+	} 
+	.homeIns{
+		margin-top: 4em;
+		font-size: .8em;
+		color: $mainColor;
+	}
+}
+// *********** end homepage *******

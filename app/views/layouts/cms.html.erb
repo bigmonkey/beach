@@ -7,21 +7,11 @@
   <title><%= cms_page_content(:title)%></title>
   <meta name="description" content="<%= cms_page_content(:description)%>">
 
-	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-	
-	<%# add google fonts %>
-	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans'>
-	<link href='http://fonts.googleapis.com/css?family=Kameron:400,700' rel='stylesheet' type='text/css'>	
-	<%= csrf_meta_tags %>
-
-  <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
+	<%= render '/layouts/fontandstyles' %>
 
 </head>
 
-<body id = "<%= cms_page_content(:navId)%>">
+<body id = "<%= cms_page_content(:navId)%>" class = "cms">
 	<header>
 		<div class = "headIntro">
 			<div class = "headPhone">
@@ -33,31 +23,16 @@
  				<div>Center</div>
 			</div>
 			<div class = "headLogo">
-				<div class = "beachside"><%= link_to 'beachside', root_path %> </div>
+				<div class = "beachside"><%= link_to 'beachside', '/' %> </div>
 				<div class = "hutch">Hutchinson Island, Florida</div>
 			</div>
 		</div>
 		<div class = "menuLine"></div>
-		<nav>
-			<ul id = "menu">
-				<% @cms_site.pages.root.children.published.each do |page| %>
-					<li><%= link_to page.label, page.full_path, id: page.slug+"-nav" %>
-					<% if page.children_count > 0 %>		
-						<ul>
-							<% @cms_site.pages.published.each do |subpage| %>
-								<% if (subpage.parent_id == page.id) %>
-									<li><%= link_to subpage.label, subpage.full_path %></li>
-								<% end %>	
-							<% end %>
-						</ul>
-					<% end%>
-					</li>
-				<% end %>	
-			</ul>
-		</nav>
+		<%= render '/layouts/navigation' %>
 	</header>
 
 	<section>	
+		 <div class = "imgCenter"></div>
 			<%= yield %>
 	</section>
 </body>

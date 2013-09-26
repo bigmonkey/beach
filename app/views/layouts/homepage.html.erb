@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Beachside Rehab</title>
+  <meta name="description" content="Beachside Rehab is a family owned practice on Hutchinson Island, Florida.">
+
+	<%= render '/layouts/fontandstyles' %>
+
+</head>
+
+<body class = "homepage">
+	<header class = "homeNav">
+
+
+			<%= render '/layouts/navigation' %>
+
+	</header>
+
+	<section>
+		<div class = "homeContentBox"></div>
+		<div class = "homeContent">
+			<%= yield %>
+		</div>
+	</section>
+
+
+</body>
+</html>
