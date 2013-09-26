@@ -1,6 +1,47 @@
 .imgCenter {
   background: url( asset-path("cms/beachside-center.jpg", image) ) center no-repeat;
-  background-size:  contain;
-  height: 300px;
+  background-size:  cover;
+  height: 350px; 
+  margin-bottom: 1.5em;
+}
 
+.imgPrograms {
+  background: url( asset-path("cms/beachside-programs.jpg", image) ) center no-repeat;
+  background-size:  cover;
+  height: 350px; 
+  margin-bottom: 1.5em;
+}
+
+.imgContact {
+  background: url( asset-path("cms/beachside-contact.jpg", image) ) center no-repeat;
+  background-size:  cover;
+  height: 350px; 
+  margin-bottom: 1.5em;
+}
+
+.imgAboutUs {
+  background: url( asset-path("cms/beachside-about-us.jpg", image) ) center no-repeat;
+  background-size:  cover;
+  height: 350px; 
+  margin-bottom: 1.5em;
+}
+
+
+
+img.cmsImageRight {
+	width:60%;
+	float: right;
+	padding-left: 2.5em;
+}
+
+
+img.cmsImageLeft {
+	width:60%;
+	float: left;
+	padding-right: 2.5em;
+}
+
+.cmsContentLeft {
+	float: left;
+	padding-right: 2.5em;	
 }

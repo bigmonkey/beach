@@ -15,7 +15,7 @@
 	<header>
 		<div class = "headIntro">
 			<div class = "headPhone">
-				<div class = "headNum"><%= cms_snippet_content(:telephone) %></div>
+				<div class = "headNum"><a href=<%= "tel:#{cms_snippet_content(:telephoneRaw)}" %>><%= cms_snippet_content(:telephone)%></a></div>
 				<div class = "headHour">24 hours</div>
 			</div>
 			<div class = "headDesc">
@@ -32,8 +32,8 @@
 	</header>
 
 	<section>	
-		 <div class = "imgCenter"></div>
 			<%= yield %>
 	</section>
+	<%= render '/layouts/footer' %>
 </body>
 </html>
