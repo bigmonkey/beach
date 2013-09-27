@@ -75,6 +75,10 @@ ol {
 	margin: 0 0 1em 2em;
 }
 
+a.clickCall{
+	text-decoration: none;
+	color: $highlightColor;
+}
 
 .clearboth {
 	clear: both;
@@ -135,7 +139,7 @@ footer {
 	float: right;
 	.headNum{ 
 		padding-top: 1.3em;
-		a, a:visited, a:hover {
+		a.clickCall, a.clickCall:visited, a.clickCall:hover {
 			text-decoration: none;
 			color: $highlightColor;
 		}
@@ -332,7 +336,7 @@ nav {
 	.homePhone {
 		margin-top: 1em;
 	}
-	.homePhone a {
+	.homePhone a.clickCall {
 		font-family: 'Kameron', serif;
 		color: $logoColor;
 		font-size: 2.5em;

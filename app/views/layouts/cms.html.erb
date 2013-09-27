@@ -15,7 +15,7 @@
 	<header>
 		<div class = "headIntro">
 			<div class = "headPhone">
-				<div class = "headNum"><a href=<%= "tel:#{cms_snippet_content(:telephoneRaw)}" %>><%= cms_snippet_content(:telephone)%></a></div>
+				<div class = "headNum"><%= cms_snippet_content(:clickcall)%></div>
 				<div class = "headHour">24 hours</div>
 			</div>
 			<div class = "headDesc">
@@ -34,6 +34,7 @@
 	<section>	
 			<%= yield %>
 	</section>
-	<%= render '/layouts/footer' %>
+	<div class="clearboth"></div>
+	<% #render '/layouts/footer' %>
 </body>
 </html>
