@@ -32,6 +32,11 @@ html, body, section{
     height: 100%;
 }
 
+body > section {
+	height: auto;
+	min-height: 100%;
+}
+
 body {
 	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 	background: $pageBackground;
@@ -88,8 +93,12 @@ footer {
 	clear: both;
 	font-size: .8em;
 	color: $highlightColor;
-	margin: 0 10%;
+	margin: 5% 10%;
 	text-align: center;
+	bottom: 0;
+	left: 0;
+	position: relative;
+
 }
 // for email addresses. reverse and unicode 
 .code {
