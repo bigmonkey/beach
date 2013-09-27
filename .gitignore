@@ -17,7 +17,6 @@
 
 # Ignore other unneeded files.
 database.yml
-development.rb
 doc/
 *.swp
 *~
@@ -25,3 +24,6 @@ doc/
 .DS_Store
 .idea
 .secret
+
+# Ignore application configuration
+/config/application.yml
