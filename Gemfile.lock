@@ -35,6 +35,10 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.0)
     atomic (1.1.10)
+    aws-sdk (1.11.1)
+      json (~> 1.4)
+      nokogiri (>= 1.4.4)
+      uuidtools (~> 2.1)
     builder (3.1.4)
     capybara (2.1.0)
       mime-types (>= 1.16)
@@ -56,7 +60,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
-    comfortable_mexican_sofa (1.9.2)
+    comfortable_mexican_sofa (1.9.0)
       active_link_to (>= 1.0.0)
       coffee-rails (>= 3.1.0)
       formatted_form (>= 2.1.0)
@@ -187,7 +191,7 @@ GEM
     rspec-expectations (2.13.0)
       diff-lcs (>= 1.1.3, < 2.0)
     rspec-mocks (2.13.1)
-    rspec-rails (2.13.2)
+    rspec-rails (2.13.1)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       railties (>= 3.0)
@@ -244,6 +248,7 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+    uuidtools (2.1.4)
     websocket (1.0.7)
     xpath (2.0.0)
       nokogiri (~> 1.3)
@@ -252,26 +257,27 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  aws-sdk (= 1.11.1)
   capybara (= 2.1.0)
   childprocess (= 0.3.6)
   coffee-rails (= 4.0.0)
-  comfortable_mexican_sofa (~> 1.9.0)
+  comfortable_mexican_sofa (= 1.9.0)
   cucumber-rails (= 1.4.0)
   database_cleaner!
-  execjs (~> 1.4.0)
-  factory_girl_rails (~> 4.2.1)
+  execjs (= 1.4.0)
+  factory_girl_rails (= 4.2.1)
   guard-spork (= 1.5.0)
   jbuilder (= 1.5.0)
   jquery-rails (= 3.0.4)
   pg (= 0.16.0)
-  rack-rewrite (~> 1.4.01)
+  rack-rewrite (= 1.4.01)
   rails (= 4.0.0)
   rails_12factor (= 0.0.2)
-  rspec-rails (~> 2.13.1)
+  rspec-rails (= 2.13.1)
   sass-rails (= 4.0.0)
   sdoc
   selenium-webdriver (= 2.35.1)
-  shoulda-matchers (~> 2.4.0)
+  shoulda-matchers (= 2.4.0)
   spork-rails (= 4.0.0)
   therubyracer
   turbolinks (= 1.3.0)
