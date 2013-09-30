@@ -1,0 +1,141 @@
+
+@import "custom";
+
+// Show/Removes "Rehab and Detox" or "Florida/FL"
+.normalDevice {
+	display: inline;
+}
+
+.narrowDevice {
+	display: none;
+}
+
+/* mobile styles */
+
+/* Smartphone Portrait */
+@media only screen and (max-width: 320px) {
+	section {
+  margin: 1% 5%;
+	}
+	.menuLine{
+	  display: none;
+	}
+	 
+	nav {
+		clear: both;
+		text-align: center;
+		font-size: .8em;
+		margin-bottom: 1em;
+	}
+
+	.normalDevice {
+		display: none
+	}		
+
+	.narrowDevice {
+		display: inline;
+	}
+
+	.headPhone {
+		text-align: center;	
+		opacity: 0.7;
+		font-size: 1em;
+		line-height: 1.1em;
+		color: $highlightColor;
+		.headNum{
+			padding-top: .3em;
+		}
+	} 	
+
+	.headLogo {
+		text-align: center;
+		color: $logoColor;
+	  background: none;
+		height: 3em;
+		line-height: .9em;
+	  .beachside {
+	  	padding-top: .3em;
+	  	font-size: 1.6em;
+	  	a, a:hover, a:visited {
+	  		text-decoration: none;
+	  		color:$logoColor;
+	  	}
+	  }
+	  .hutch {font-size: 0.7em}
+	}
+
+	#menu li{
+		float:none;
+		display: inline;
+		text-align: center;
+		padding: 0 0 0 0;
+		position: relative;
+	}	
+
+	#menu a{
+		line-height: 1em;
+		padding: 0 0.6em;		
+	}	
+
+	.cms #menu a {
+		text-transform: lowercase;
+	}
+
+	#menu ul{
+		top:1.4em;
+		left: 0;
+	}
+	.imgCenter,.imgPrograms,.imgContact, .imgAboutUs {
+	  height: 150px; 
+	}	
+
+	img.cmsImageRight, img.cmsImageLeft {
+		width:100%;
+		float: none;
+		padding: 0em;
+		display: block;
+		margin: 0 auto;
+	}
+
+}
+
+/* Smartphone Landscape */
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+
+	section {
+  margin: 1% 5%;
+	}
+	
+	.normalDevice {
+		display: none
+	}		
+
+	.narrowDevice {
+		display: inline;
+	}
+
+	.menuLine{
+	  display: none;
+	}
+	
+	.headIntro {
+		font-size: .6em;
+	}	 
+
+	#menu a{
+		line-height: 1em;
+		padding: 0 0.6em;		
+	}	
+
+	.cms #menu a {
+		text-transform: lowercase;
+	}
+}	
+
+@media only screen and (min-width: 481px) and (max-width: 800px) {
+  
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1024px) {
+  
+}

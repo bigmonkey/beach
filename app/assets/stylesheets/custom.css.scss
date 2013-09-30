@@ -131,6 +131,7 @@ footer {
 	text-align: center;
 	color: $logoColor;
   background: url( asset-path("blank-logo.png", image) ) center no-repeat;
+  background-size: contain;
   height: 6em;	
   line-height: 1.3em;
   .beachside {
@@ -210,6 +211,11 @@ nav {
 	text-transform: lowercase;
 }
 
+// remove home from menu
+#menu li:first-child {
+	display: none;
+}
+
 #menu li:hover > a{
 	text-decoration: none;
 	background: $lightGrey;
@@ -245,7 +251,7 @@ nav {
 
 #menu ul a{    
   height: auto;
-  padding: 10px;  
+  padding: .3em .5em;  
   line-height: 1;
   display: block;
   white-space: nowrap;
@@ -301,7 +307,7 @@ nav {
 
 // highlights menu navigation for selected page
 
-#center #center-nav, #programs #programs-nav, #about-us #about-us-nav, #contact #contact-nav {
+#center #center-nav, #programs #programs-nav, #about #about-nav, #contact #contact-nav {
 	text-decoration: underline;
 } 
 
