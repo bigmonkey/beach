@@ -14,6 +14,9 @@
 
 /* Smartphone Portrait */
 @media only screen and (max-width: 320px) {
+	header {
+		margin:	0 5%;
+	}
 	section {
   margin: 1% 5%;
 	}
@@ -25,7 +28,7 @@
 		clear: both;
 		text-align: center;
 		font-size: .8em;
-		margin-bottom: 1em;
+		margin: 1em 0;
 	}
 
 	.normalDevice {
@@ -37,39 +40,31 @@
 	}
 
 	.headPhone {
-		text-align: center;	
-		opacity: 0.7;
-		font-size: 1em;
+		font-size: 1.1em;
 		line-height: 1.1em;
-		color: $highlightColor;
 		.headNum{
-			padding-top: .3em;
+			padding-top: .5em;
 		}
 	} 	
 
 	.headLogo {
-		text-align: center;
-		color: $logoColor;
-	  background: none;
+	  background: url( asset-path("blank-logo.png", image) ) left center no-repeat;
+		background-size: contain;
 		height: 3em;
-		line-height: .9em;
+		line-height: 1.1em;
+		font-size: .8em;
+		padding-left: 3em;
+		float:left;
 	  .beachside {
-	  	padding-top: .3em;
-	  	font-size: 1.6em;
-	  	a, a:hover, a:visited {
-	  		text-decoration: none;
-	  		color:$logoColor;
+	  	padding-top: .5em;
 	  	}
-	  }
-	  .hutch {font-size: 0.7em}
+	  .hutch {font-size: 0.9em}
 	}
 
 	#menu li{
 		float:none;
 		display: inline;
 		text-align: center;
-		padding: 0 0 0 0;
-		position: relative;
 	}	
 
 	#menu a{
@@ -83,9 +78,8 @@
 
 	#menu ul{
 		top:1.4em;
-		left: 0;
 	}
-	
+
 	.imgCenter,.imgPrograms,.imgContact, .imgAboutUs {
 	  height: 150px; 
 	}	
@@ -103,8 +97,21 @@
 /* Smartphone Landscape */
 @media only screen and (min-width: 321px) and (max-width: 480px) {
 
+	header {
+		margin:	0 5%;
+	}
 	section {
   margin: 1% 5%;
+	}
+	.menuLine{
+	  display: none;
+	}
+	 
+	nav {
+		clear: both;
+		text-align: center;
+		font-size: .8em;
+		margin: 1em 0;
 	}
 
 	.normalDevice {
@@ -115,28 +122,130 @@
 		display: inline;
 	}
 
-	.menuLine{
-	  display: none;
+	.headPhone {
+		font-size: 1.2em;
+		line-height: 1.1em;
+		.headNum{
+			padding-top: .5em;
+		}
+	} 	
+
+	.headLogo {
+	  background: url( asset-path("blank-logo.png", image) ) left center no-repeat;
+		background-size: contain;
+		height: 4em;
+		line-height: 1.1em;
+		font-size: .8em;
+		padding-left: 3.5em;
+		float: left;
+	  .beachside {
+	  	padding-top: .5em;
+	  	}
+	  .hutch {font-size: 0.9em}
 	}
-	
-	.headIntro {
-		font-size: .6em;
-	}	 
+
+	#menu li{
+		float:none;
+		display: inline;
+		text-align: center;
+	}	
 
 	#menu a{
 		line-height: 1em;
-		padding: 0 0.6em;		
+		padding: 0 1.1em;		
 	}	
 
 	.cms #menu a {
 		text-transform: lowercase;
 	}
+
+	#menu ul{
+		top:1.4em;
+	}
+
+	.imgCenter,.imgPrograms,.imgContact, .imgAboutUs {
+	  height: 150px; 
+	}	
+
+	img.cmsImageRight, img.cmsImageLeft {
+		width:100%;
+		float: none;
+		padding: 0em;
+		display: block;
+		margin: 0 auto;
+	}
 }	
 
-@media only screen and (min-width: 481px) and (max-width: 800px) {
-  
+// Larger Smart Phone Landscape
+@media only screen and (min-width: 481px) and (max-width: 720px) {
+	header {
+		margin:	0 5%;
+	}
+	section {
+  margin: 1% 5%;
+	}
+	.menuLine{
+	  display: none;
+	}
+	 
+	nav {
+		clear: both;
+		text-align: center;
+		font-size: .8em;
+		margin: 1em 0;
+	}
+
+	.normalDevice {
+		display: none
+	}		
+
+	.narrowDevice {
+		display: inline;
+	}
+
+	.headPhone {
+		font-size: 1.2em;
+		line-height: 1.1em;
+		.headNum{
+			padding-top: .5em;
+		}
+	} 	
+
+	.headLogo {
+	  background: url( asset-path("blank-logo.png", image) ) left center no-repeat;
+		background-size: contain;
+		height: 4em;
+		line-height: 1.1em;
+		font-size: .8em;
+		padding-left: 3.5em;
+		float: left;
+	  .beachside {
+	  	padding-top: .5em;
+	  	}
+	  .hutch {font-size: 0.9em}
+	}
+
+	.imgCenter,.imgPrograms,.imgContact, .imgAboutUs {
+	  height: 150px; 
+	}	
+
+	img.cmsImageRight, img.cmsImageLeft {
+		width:50%;
+		float: none;
+		padding: 0em;
+		display: block;
+		margin: 0 auto;
+	}
+
 }
 
-@media only screen and (min-width: 801px) and (max-width: 1024px) {
-  
+@media only screen and (min-width: 721px) and (max-width: 1024px) {
+
+	header {
+		margin:	0 5%;
+	}
+	section {
+  margin: 1% 5%;
+	}  
+
 }

@@ -130,6 +130,7 @@ footer {
 .headLogo {
 	text-align: center;
 	color: $logoColor;
+	font-size: 1em;
   background: url( asset-path("blank-logo.png", image) ) center no-repeat;
   background-size: contain;
   height: 6em;	
