@@ -178,10 +178,11 @@ nav {
 }
 
 #menu{
-	margin: 0;
-	padding: 0;
+	margin: 0 auto;
+	padding: 0 2em;
 	list-style: none;
-	display: inline-block;		
+	display: inline-block;	
+	width: 60%;	
 }
 
 .cms #menu {
@@ -190,7 +191,6 @@ nav {
 
 #menu li{
 	float: left;
-	text-align: left;
 	padding: 0 0 0 0;
 	position: relative;
 	width:25%;
@@ -198,18 +198,18 @@ nav {
 
 #menu a{
 	line-height: 2em;
-	padding: 0 2em;		
+	padding: 0.25em 1em;		
 	text-decoration: none;
 }
 
 .cms #menu a {
 	color: $highlightColor;
-	text-transform: uppercase;
+//	text-transform: uppercase;
 }
 
 .homepage #menu a {
 	color: $logoColor;
-	text-transform: lowercase;
+//	text-transform: lowercase;
 }
 
 // remove home from menu
@@ -239,7 +239,7 @@ nav {
   left: 0;
   z-index: 99999;   
   background: $lightGrey; 
-	top:2em;
+
   @include rounded (.5em)
 }
 
@@ -247,7 +247,8 @@ nav {
   float: none;
   margin: 0;
   padding: 0;
-  display: block;  
+  width: 100%;
+  text-align: left;
 }
 
 #menu ul a{    
@@ -274,6 +275,7 @@ nav {
 .cms #menu ul a:hover{
   background: $highlightColor;
   color: white;
+  display: block;
 }
 
 .homepage #menu ul a:hover{
@@ -373,8 +375,39 @@ nav {
 }
 // *********** end homepage *******
 
+#breadcrumb {
+	font-size: .7em;
+	color: $highlightColor;
+}
+#breadcrumb ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#breadcrumb li {
+	float: left;
+	padding: 0 .3em;
+}
+
+#breadcrumb {
+	a, a:hover, a:visited  {
+		color: $highlightColor;
+		text-decoration: underline;
+	}
+}
+
+#breadcrumb .breadLast {
+	color: $mainColor;
+}
+// ************** breadcrumb *******
+
+
+// ************** end breadcrumb *******
+
 // ************* other styling *******
-#about-us ol > li {
+// styles the FAQ's
+#about ol > li {
 	color: $highlightColor;
 }
 // ************* end other styling *******

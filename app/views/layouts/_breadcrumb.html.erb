@@ -1,0 +1,14 @@
+<%# breadcrumb_pages is in helpers/application_helper.rb and creates array of page_id's and @last_page%>
+
+<div id = "breadcrumb">
+	<ul>
+		<% breadcrumb_pages.reverse.each_with_index do|p, i| %>
+			<% if i == @last_page %>
+				<li class = "breadLast"><%= "#{@cms_site.pages.find(p).label}" %></li>
+			<% else %>
+				<li><%= link_to "#{@cms_site.pages.find(p).label}", @cms_site.pages.find(p).full_path %></li>
+				<li>></li>
+			<% end %>	
+		<% end %>
+	</ul>
+</div>
