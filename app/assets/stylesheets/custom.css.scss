@@ -339,7 +339,7 @@ nav {
 	position: relative;
 	margin: 0 20%;
 	text-align: center;	
-	top: -22em;
+	top: -23em;
 	h1 {
 		font-family: 'Kameron', serif;
 		color: $logoColor;
@@ -364,13 +364,17 @@ nav {
 		text-decoration: none;
 	} 
 	.homeIns{
-		margin-top: 4em;
+		margin-top: 2em;
 		font-size: .8em;
 		color: $mainColor;
 		a, a:hover, a:visited {
 			color: $mainColor;
 			text-decoration: none;
 		}
+	}
+	.homeInsLogo{
+		margin-top: .5em;
+		img {padding: 0 .5em;}
 	}
 }
 // *********** end homepage *******

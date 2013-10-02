@@ -1,31 +1,16 @@
+/*
 .imgCenter {
   background: url( asset-path("cms/beachside-center.jpg", image) ) center no-repeat;
   background-size:  cover;
   height: 350px; 
   margin-bottom: 1.5em;
 }
+*/
 
-.imgPrograms {
-  background: url( asset-path("cms/beachside-programs.jpg", image) ) center no-repeat;
-  background-size:  cover;
-  height: 350px; 
-  margin-bottom: 1.5em;
+.imageWide img {
+  max-width: 100%;
+  background-size: cover;
 }
-
-.imgContact {
-  background: url( asset-path("cms/beachside-contact.jpg", image) ) center no-repeat;
-  background-size:  cover;
-  height: 350px; 
-  margin-bottom: 1.5em;
-}
-
-.imgAboutUs {
-  background: url( asset-path("cms/beachside-about-us.jpg", image) ) center no-repeat;
-  background-size:  cover;
-  height: 350px; 
-  margin-bottom: 1.5em;
-}
-
 
 
 img.cmsImageRight {
