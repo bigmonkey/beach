@@ -1,0 +1,13 @@
+// Variables
+$pageBackground: #fff;
+$mainColor: #666;
+$highlightColor: #00267d;
+$lightGrey: #eee;
+$logoColor: #646054;
+
+// sets rounded corners for most browsers use @include rounded (radius)
+@mixin rounded($radius) {
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}

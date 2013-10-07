@@ -1,16 +1,5 @@
-// Variables
-$pageBackground: #fff;
-$mainColor: #666;
-$highlightColor: #00267d;
-$lightGrey: #eee;
-$logoColor: #646054;
+@import "custom_variables";
 
-// sets rounded corners for most browsers use @include rounded (radius)
-@mixin rounded($radius) {
-  border-radius: $radius;
-  -moz-border-radius: $radius;
-  -webkit-border-radius: $radius;
-}
 
 /*limited reset*/
 * {
@@ -127,23 +116,15 @@ footer {
 	float: left;
 	.rehab { padding-top: 1.3em;}
 }
+
 .headLogo {
 	text-align: center;
-	color: $logoColor;
-	font-size: 1em;
-  background: url( asset-path("blank-logo.png", image) ) center no-repeat;
-  background-size: contain;
-  height: 6em;	
-  line-height: 1.3em;
-  .beachside {
-  	padding-top: 1.4em;
-  	font-size: 2em;
-  	a, a:hover, a:visited {
-  		text-decoration: none;
-  		color:$logoColor;
-  	}
-  }
-  .hutch {font-size: 0.75em}
+	img {width: 200px;}
+}
+
+.headDesc a, .headDesc a:visited, .headDesc a:hover{
+	text-decoration: none;
+	color: $highlightColor;
 }
 
 .headPhone {
@@ -198,7 +179,7 @@ nav {
 
 #menu a{
 	line-height: 2em;
-	padding: 0.25em 1em;		
+	padding: 0.4em 1em;		
 	text-decoration: none;
 }
 
@@ -253,7 +234,7 @@ nav {
 
 #menu ul a{    
   height: auto;
-  line-height: 1;
+  line-height: 1.5em;
   display: block;
   white-space: nowrap;
   float: none;

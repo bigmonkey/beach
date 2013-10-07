@@ -18,6 +18,7 @@
 </head>
 
 <body id = "<%= cms_page_content(:navId)%>" class = "cms">
+	<%= render '/layouts/google_tag' %>
 	<header>
 		<div class = "headIntro">
 			<div class = "headPhone">
@@ -25,13 +26,11 @@
 				<div class = "headHour">24 hours</div>
 			</div>
 			<div class = "headDesc normalDevice">
- 				<div class = "rehab">Rehab and Detox</div>
- 				<div>Center</div>
+ 				<div class = "rehab"><%= link_to 'Rehab and Detox', '/center' %></div>
+ 				<div><%= link_to 'Center', '/center' %></div>
 			</div>
 			<div class = "headLogo">
-				<div class = "beachside"><%= link_to 'beachside', '/' %> </div>
-				<div class = "hutch normalDevice">Hutchinson Island, Florida</div>
-				<div class = "hutch narrowDevice">Hutchinson Island, FL</div>
+				<%= link_to(image_tag("http://s3.amazonaws.com/beachdata/cms/files/files/000/000/038/original/blank-logo.png"), '/') %> 
 			</div>
 		</div>
 		<div class = "menuLine"></div>

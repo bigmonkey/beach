@@ -1,3 +1,4 @@
+@import "custom_variables";
 /**
  * BxSlider v4.0 - Fully loaded, responsive content slider
  * http://bxslider.com
@@ -16,7 +17,7 @@
 
 .bx-wrapper {
 	position: relative;
-	margin: 0 auto 3em;
+	margin: 0 auto 2em;
 	padding: 0;
 	*zoom: 1;
 }
@@ -69,9 +70,9 @@
 .bx-wrapper .bx-pager {
 	text-align: center;
 	font-size: .85em;
-	font-family: Arial;
+	//font-family: Arial;
 	font-weight: bold;
-	color: #666;
+	//color: #666;
 	padding-top: 20px;
 }
 
@@ -83,21 +84,19 @@
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a {
-	background: #666;
+	background: #ccc;
 	text-indent: -9999px;
 	display: block;
-	width: 10px;
-	height: 10px;
+	width: 7px;
+	height: 7px;
 	margin: 0 5px;
 	outline: 0;
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	border-radius: 5px;
+	@include rounded(4px);
 }
 
 .bx-wrapper .bx-pager.bx-default-pager a:hover,
 .bx-wrapper .bx-pager.bx-default-pager a.active {
-	background: #000;
+	background: $highlightColor;
 }
 
 /* DIRECTION CONTROLS (NEXT / PREV) */

@@ -4,14 +4,15 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Beachside Rehab</title>
-  <meta name="description" content="Beachside Rehab is a family owned practice on Hutchinson Island, Florida.">
+  <title><%= cms_page_content(:title)%></title>
+  <meta name="description" content="<%= cms_page_content(:description)%>">
 
 	<%= render '/layouts/fontandstyles' %>
 
 </head>
 
 <body class = "homepage">
+	<%= render '/layouts/google_tag' %>	
 	<header class = "homeNav">
 
 
