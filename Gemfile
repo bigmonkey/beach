@@ -41,7 +41,7 @@ end
 
 # Use unicorn as the app server in production heroku and ubuntu
 gem 'unicorn','4.6.3', :platform =>'ruby'
-gem 'thin','1.6.0', :platform => 'mingw'
+#gem 'thin','1.6.0', :platform => 'mingw'
 gem "execjs", '1.4.0'
 gem 'therubyracer', :platform => 'ruby'
 
