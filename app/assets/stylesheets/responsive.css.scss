@@ -97,12 +97,12 @@
 		top: -18em;
 		h1{font-size: 2em;}
 		.homeLocation {font-size: .9em; padding-top: 1.1em;}
-		.homePhone a.clickCall {font-size: 1.8em;}
+		.homePhone a.clickCall {font-size: 1.5em;}
 		.homeInsLogo {display: none;}
 	}
 }
 
-/* Smartphone Landscape */
+/* Wider Smartphone Portrait and Landscape */
 @media only screen and (min-width: 321px) and (max-width: 480px) {
 
 	header {
@@ -184,6 +184,19 @@
 		float: none;
 		text-align: center;
 	}	
+
+	// homepage
+	.homeContentBox{
+		margin: 10%;
+		height: 18em;
+	}
+	.homeContent {
+		top: -18em;
+		h1{font-size: 2.5em;}
+		.homeLocation {font-size: .9em; padding-top: 1.1em;}
+		.homePhone a.clickCall {font-size: 1.7em;}
+		.homeInsLogo {display:none}
+	}	
 }	
 
 // Larger Smart Phone Landscape
@@ -231,6 +244,18 @@
 		display: block;
 		margin: 0 auto;
 	}
+	// homepage
+	.homeContentBox{
+		margin: 10%;
+		height: 18em;
+	}
+	.homeContent {
+		top: -19em;
+		h1{font-size: 2.5em;}
+		.homeLocation {font-size: .9em; padding-top: 1.1em;}
+		.homePhone a.clickCall {font-size: 1.7em;}
+		.homeInsLogo {display:none}
+	}		
 
 }
 
@@ -242,5 +267,20 @@
 	section {
   margin: 1% 5%;
 	}  
+
+	// homepage
+	.homeContentBox{
+		margin: 10%;
+		height: 18em;
+	}
+	.homeContent {
+		top: -20em;
+		h1{font-size: 2.5em;}
+		.homeLocation {font-size: .9em; padding-top: 1.1em;}
+		.homePhone a.clickCall {font-size: 1.7em;}
+		.homeInsLogo {
+			img {width: 15%}
+		}	
+	}		
 
 }
