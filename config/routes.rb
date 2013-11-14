@@ -2,6 +2,8 @@ Beach::Application.routes.draw do
   
   ComfortableMexicanSofa::Routing.admin(:path => '/cms-admin')
   
+    get ":controller/:action", controller: /services/
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
