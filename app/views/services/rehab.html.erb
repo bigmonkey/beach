@@ -61,6 +61,10 @@
 							<p>"I loved the staff. It was great." - Con Way </p>
 						</div>				
 					</div>
+					<div class = "clearboth"></div>
+					<div class = "landIns">
+						<%= cms_snippet_content(:insurance_providers) %>
+					</div>								
 				</div>	
 				<div class = "landActionSection">
 
@@ -70,21 +74,18 @@
 						<div class = "landActionHour">24 hours a day</div>
 					</div>
 					<%= form_for @guest, url: '/services/thanks' do |f| %>
-					  <%= f.label :name %>:
-					  <%= f.text_field :name %><br />					
-					  <%= f.label :phone %>:
-					  <%= f.text_field :phone %><br />					
-					  <%= f.label :email %>:
-					  <%= f.text_field :email %><br />					
-					  <%= f.label :comments %>:
-					  <%= f.text_field :comments %><br />					
-					  <%= f.submit %>
+					  <%= f.label :name %>
+					  <%= f.text_field :name, placeholder: "Tracy Harper" %><br />					
+					  <%= f.label :phone %>
+					  <%= f.text_field :phone, placeholder: "xxx-xxx-xxxx" %><br />					
+					  <%= f.label :email %>
+					  <%= f.text_field :email,placeholder: "tracy.harper@gmail.com" %><br />					
+					  <%= f.label :comments %>
+					  <%= f.text_area :comments, placeholder: "(optional)", size: "20x5" %>
+					  <%= f.submit "Learn More", class: "submitButton" %>
 					<% end %>
 				</div>		
 				<div class = "clearboth"></div>
-				<div class = "landIns">
-					<%= cms_snippet_content(:insurance_providers) %>
-				</div>				
 	<%= render '/layouts/footer' %>
 			</div>
 		</div>

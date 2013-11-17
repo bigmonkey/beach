@@ -4,6 +4,7 @@ $mainColor: #666;
 $highlightColor: #00267d;
 $lightGrey: #eee;
 $logoColor: #646054;
+$landHighlight: #003300;  // used on landig pages for button and highlighted text
 
 // sets rounded corners for most browsers use @include rounded (radius)
 @mixin rounded($radius) {
