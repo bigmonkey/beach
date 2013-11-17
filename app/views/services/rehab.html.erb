@@ -1,0 +1,101 @@
+<% # title and description for seo %>
+<% content_for :seotags do %>
+  <title> World Class Family Run | Beachside Rehab</title>
+  <meta name="description" content="Beachside Rehab is a family run, world call facility on the coast of Florida. Start your journey now.">
+<% end %>
+
+
+	<section>
+		<div class = "landContentBox"></div>
+		<div class = "landContent">
+			<div>		
+				<div class = "headIntro">
+					<div class = "headPhone">
+						<div class = "headNum"><%= cms_snippet_content(:clickcall)%></div>
+						<div class = "headHour">24 hours</div>
+					</div>
+					<div class = "headDesc normalDevice">
+		 				<div class = "rehab"><%= link_to 'Rehab and Detox', '/center' %></div>
+		 				<div><%= link_to 'Center', '/center' %></div>
+					</div>
+					<div class = "headLogo">
+						<%= link_to(image_tag("http://s3.amazonaws.com/beachdata/cms/files/files/000/000/038/original/blank-logo.png"), '/') %> 
+					</div>
+				</div>		
+				<div>
+			    <ul class="bxslider">
+						<li><img src="http://s3.amazonaws.com/beachdata/cms/files/files/000/000/028/original/Center-1.jpg" alt=""></li>
+						<li><img src="http://s3.amazonaws.com/beachdata/cms/files/files/000/000/031/original/Center-Activity.jpg" alt=""></li>
+						<li><img src="http://s3.amazonaws.com/beachdata/cms/files/files/000/000/029/original/Center-2.jpg" alt=""></li>
+						<li><img src="http://s3.amazonaws.com/beachdata/cms/files/files/000/000/032/original/Center-Beachside.jpg" alt=""></li>
+						<li><img src="http://s3.amazonaws.com/beachdata/cms/files/files/000/000/030/original/Center-3.jpg" alt=""></li>
+			  	</ul>
+				</div>		
+				<div class = "landDesc">
+					<div >
+						<ul id="landNav">
+							<li><a href="javascript:MenuTab(1);" id="landTab1" class="landSelected">Beachside</a></li>
+							<li><a href="javascript:MenuTab(2);" id="landTab2">Programs</a></li>
+							<li><a href="javascript:MenuTab(3);" id="landTab3">Center</a></li>
+							<li><a href="javascript:MenuTab(4);" id="landTab4">Compare</a></li>
+							<li><a href="javascript:MenuTab(5);" id="landTab5">Testimonials</a></li>
+						</ul>
+					</div>				
+					<div class = "clearboth"></div>
+					<div id="landDescContent">
+						<div id = "landTab1Content" class = "landShowContent">
+							<p>Beachside is a private, family run, drug and alcohol abuse treatment facility located on the tropical Hutchinson Island in Florida. Beachside Rehab focuses on a holistic approach towards drug and alcohol abuse treatment while supporting the conventionally proven, 12 step program. We utilize mind, body, and spiritual elements throughout the treatment process to provide an enhanced recovery program for each individual. It is our understanding that every addict’s journey towards recovery is unique and that one program may not fit all. We will work passionately to provide the specialized treatment every suffering addict deserves.</p>
+						</div>	
+						<div id = "landTab2Content">
+							<p>Drug and alcohol rehab helps the suffering addict to transition into a life free from drug and alcohol abuse. When an individual has a substance abuse problem they easily lose control of their lives. The desire for the toxic substance becomes so strong that they end up unintentionally hurting people in their lives such as their family members, spouse, friends, employers, co-workers, and even their pets. The addiction will take over their life making it impossible to sustain a functional, and healthy lifestyle.</p>
+						</div>	
+						<div id = "landTab3Content">
+							<p>Beachside Rehab is a small, family run, private facility located directly on the Atlantic Ocean in Hutchinson Island, FL. The discreet surrounding and natural beauty of the island is the perfect environment to begin your journey of recovery. At Beachside Rehab, we take pride in our ability to provide quality client care, while remaining one of the most affordable treatment programs in Florida.</p>
+							<p>Beachside Rehab provides one of the most affordable, private treatment programs in south Florida. Call us today to find out about our new rates and payment plans.</p>
+						</div>	
+						<div id = "landTab4Content">
+							<p>We are the best</p>
+						</div>				
+						<div id = "landTab5Content">
+							<p>"This place is like no other!" - Yair </p>
+							<p>"I loved the staff. It was great." - Con Way </p>
+						</div>				
+					</div>
+				</div>	
+				<div class = "landActionSection">
+
+					<div class = "landAction">
+						<div class = "landActionPhrase"><%= "Speak with a trained counselor".titleize %></div>	
+						<div class = "landActionNum"><%= cms_snippet_content(:clickcall)%></div>
+						<div class = "landActionHour">24 hours a day</div>
+					</div>
+					<%= form_for @guest, url: '/services/thanks' do |f| %>
+					  <%= f.label :name %>:
+					  <%= f.text_field :name %><br />					
+					  <%= f.label :phone %>:
+					  <%= f.text_field :phone %><br />					
+					  <%= f.label :email %>:
+					  <%= f.text_field :email %><br />					
+					  <%= f.label :comments %>:
+					  <%= f.text_field :comments %><br />					
+					  <%= f.submit %>
+					<% end %>
+				</div>		
+				<div class = "clearboth"></div>
+				<div class = "landIns">
+					<%= cms_snippet_content(:insurance_providers) %>
+				</div>				
+	<%= render '/layouts/footer' %>
+			</div>
+		</div>
+	</section>
+
+
+	
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+		  $('.bxslider').bxSlider();
+		});
+	</script>	
+

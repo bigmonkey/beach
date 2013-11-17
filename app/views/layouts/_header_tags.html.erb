@@ -1,3 +1,16 @@
+  <meta charset="utf-8">
+
+	<% if content_for?(:seotags) %>
+	<%= yield :seotags %>
+	<% else %>
+  <title><%= cms_page_content(:title)%></title>
+  <meta name="description" content="<%= cms_page_content(:description)%>">
+	<% end %>
+	<% if content_for?(:followtags) %>
+	<%= yield :followtags %>
+	<% end %>
+	<%= favicon_link_tag %>
+
 	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
 	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 

@@ -1,0 +1,27 @@
+<% # title and description for seo %>
+<% content_for :seotags do %>
+  <title> World Class Family Run | Beachside Rehab</title>
+  <meta name="description" content="Beachside Rehab is a family run, world call facility on the coast of Florida. Start your journey now.">
+<% end %>
+
+
+
+<div>
+
+		<div class = "headIntro">
+			<div class = "headPhone">
+				<div class = "headNum"><%= cms_snippet_content(:clickcall)%></div>
+				<div class = "headHour">24 hours</div>
+			</div>
+			<div class = "headDesc normalDevice">
+ 				<div class = "rehab"><%= link_to 'Rehab and Detox', '/center' %></div>
+ 				<div><%= link_to 'Center', '/center' %></div>
+			</div>
+			<div class = "headLogo">
+				<%= link_to(image_tag("http://s3.amazonaws.com/beachdata/cms/files/files/000/000/038/original/blank-logo.png"), '/') %> 
+			</div>
+		</div>
+
+<div>Thanks. We'll contact you shortly.</div>
+
+</div>

@@ -1,0 +1,99 @@
+// Place all the styles related to the Services controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "custom_variables";
+
+.landContentBox {
+	background: $pageBackground;
+	opacity: 0.8;
+	height: 50em;
+	margin: 1% 0%;
+	@include rounded (.3em);
+}
+
+.landContent {
+	position: relative;
+	margin: 0 7%;
+	text-align: center;	
+	top: -50em;
+	div {margin: 0; padding: 0;}
+
+	.bx-controls {
+		display: none;
+	}
+
+	.landDesc {
+		float: left;
+		text-align: left;
+		width: 65%;
+		margin-top: 1em;
+		padding: 0;
+	}
+
+	.landActionSection {
+		width: 35%;
+		float: right;
+		color: #003300;
+		margin-top: 2em;
+		.landAction { 
+			font-size: 1em;
+			a {font-size: 1.5em}
+		}
+		form {
+			margin-top: 1em;
+		}
+		label {
+			text-align: left;
+			width: 25%;
+		}
+
+	}
+
+	ul#landNav {
+		list-style:none;
+		margin: 0 0 0 1em;
+	}
+	ul#landNav li {
+		float:left;
+	}
+	ul#landNav li a {
+		color: $highlightColor;
+		background: none;
+		display:block;
+		padding:.4em 1em;
+		margin:0;
+		text-decoration: none;
+		outline: none;		
+	}
+	ul#landNav li a.landSelected {
+		border-bottom:1px solid #fff;
+		background:#fff;
+	 	border-radius: .3em .3em 0 0 ;
+  	-moz-border-radius: .3em .3em 0 0 ;
+  	-webkit-border-radius: .3em .3em 0 0 ;		
+	}
+
+	#landDescContent div {
+		display: none;
+	}
+	#landDescContent div.landShowContent {
+		display: block;
+		background: $pageBackground;
+		height: 15em;
+		padding: .5em 1em;
+		@include rounded (.3em);
+	}	
+
+	.landIns{
+		color: $highlightColor;
+		font-size: .8em;
+		margin-top: 3em;
+		img { margin: 0 1em;}
+	}
+
+	footer {
+		margin-top: 2%;
+	}
+
+}
