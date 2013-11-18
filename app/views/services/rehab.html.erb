@@ -24,38 +24,73 @@
 				</div>		
 				<div class = "clearboth"></div>
 				<div>
-			    <ul class="bxslider">
-						<li><img src="http://s3.amazonaws.com/beachdata/cms/files/files/000/000/028/original/Center-1.jpg" alt=""></li>
-						<li><img src="http://s3.amazonaws.com/beachdata/cms/files/files/000/000/031/original/Center-Activity.jpg" alt=""></li>
-						<li><img src="http://s3.amazonaws.com/beachdata/cms/files/files/000/000/029/original/Center-2.jpg" alt=""></li>
-						<li><img src="http://s3.amazonaws.com/beachdata/cms/files/files/000/000/032/original/Center-Beachside.jpg" alt=""></li>
-						<li><img src="http://s3.amazonaws.com/beachdata/cms/files/files/000/000/030/original/Center-3.jpg" alt=""></li>
-			  	</ul>
+					<%= render 'sliderImages' %>
 				</div>		
 				<div class = "landDesc">
 					<div >
 						<ul id="landNav">
-							<li><a href="javascript:MenuTab(1);" id="landTab1" class="landSelected">Beachside</a></li>
+							<li><a href="javascript:MenuTab(1);" id="landTab1" >Beachside</a></li>
 							<li><a href="javascript:MenuTab(2);" id="landTab2">Programs</a></li>
-							<li><a href="javascript:MenuTab(3);" id="landTab3">Center</a></li>
-							<li><a href="javascript:MenuTab(4);" id="landTab4">Compare</a></li>
+							<li><a href="javascript:MenuTab(4);" id="landTab4" class="landSelected">Compare</a></li>
 							<li><a href="javascript:MenuTab(5);" id="landTab5">Comments</a></li>
 						</ul>
 					</div>				
 					<div class = "clearboth"></div>
 					<div id="landDescContent">
-						<div id = "landTab1Content" class = "landShowContent">
-							<p>Beachside is a private, family run, drug and alcohol abuse treatment facility located on the tropical Hutchinson Island in Florida. Beachside Rehab focuses on a holistic approach towards drug and alcohol abuse treatment while supporting the conventionally proven, 12 step program. We utilize mind, body, and spiritual elements throughout the treatment process to provide an enhanced recovery program for each individual. It is our understanding that every addict’s journey towards recovery is unique and that one program may not fit all. We will work passionately to provide the specialized treatment every suffering addict deserves.</p>
+						<div id = "landTab1Content" >
+							<p>Beachside is a private, family run, drug and alcohol abuse treatment facility.</p>
+							<p>Beachside Rehab's accredited counselors focus on a holistic drug and alcohol abuse treatment approach while supporting the conventionally proven, 12 step program. We utilize mind, body, and spiritual elements throughout the treatment process to provide an enhanced recovery program for each individual. We understand that every addict’s journey towards recovery is unique and we work passionately to provide specialized treatment.</p>
+							<p>We are located on the tropical Hutchinson Island in Florida near Miami, Fort Lauderdale and West Palm Beach airports.</p>
 						</div>	
 						<div id = "landTab2Content">
-							<p>Drug and alcohol rehab helps the suffering addict to transition into a life free from drug and alcohol abuse. When an individual has a substance abuse problem they easily lose control of their lives. The desire for the toxic substance becomes so strong that they end up unintentionally hurting people in their lives such as their family members, spouse, friends, employers, co-workers, and even their pets. The addiction will take over their life making it impossible to sustain a functional, and healthy lifestyle.</p>
+							<p>Our private, family-run facility is discreetly surrounded by the natural beauty of Hutchinson Island.<p>
+							<p>Our licensed counselors care deeply about working with you on programs that include individual therapy, group therapies, relapse prevention, and family counseling. We help with individuals suffering from alcohol addiction and drug addictions such as cocaine, meth-amphetamine, crack, prescription pain-killers, and others.<p>
+							<p>Our counseling combined with nutrition and fitness programs help addicts get back to a sustained functional, and healthy lifestyle.</p>
 						</div>	
-						<div id = "landTab3Content">
-							<p>Beachside Rehab is a small, family run, private facility located directly on the Atlantic Ocean in Hutchinson Island, FL. The discreet surrounding and natural beauty of the island is the perfect environment to begin your journey of recovery. At Beachside Rehab, we take pride in our ability to provide quality client care, while remaining one of the most affordable treatment programs in Florida.</p>
-							<p>Beachside Rehab provides one of the most affordable, private treatment programs in south Florida. Call us today to find out about our new rates and payment plans.</p>
-						</div>	
-						<div id = "landTab4Content">
-							<p>We are the best</p>
+						<div id = "landTab4Content" class = "landShowContent">
+							<table>
+								<tr>
+									<th></th>
+									<th>Others</th>
+									<th>Beachside Rehab</th>
+								</tr>
+								<tr>
+									<td>Family Run</td>
+									<td>No</td>
+									<td>Yes</td>
+								</tr>
+								<tr>
+									<td>Personalized Care</td>
+									<td>No</td>
+									<td>Yes</td>
+								</tr>
+								<tr>
+									<td>Licensed Professionals</td>
+									<td>Yes</td>
+									<td>Yes</td>
+								</tr>		
+								<tr>
+									<td>Peaceful Beach</td>
+									<td>No</td>
+									<td>Yes</td>
+								</tr>	
+								<tr>
+									<td>Nutrition Counseling</td>
+									<td>Yes</td>
+									<td>Yes</td>
+								</tr>		
+								<tr>
+									<td>Fitness Programs</td>
+									<td>Yes</td>
+									<td>Yes</td>
+								</tr>
+								<tr>
+									<td>Accepts Insurance</td>
+									<td>Yes</td>
+									<td>Yes</td>
+								</tr>																													
+							</table>
+						<p>Our staff has over 50 combined years of experience in helping addicts regain control of their lives. Call us to learn more.</p>	
 						</div>				
 						<div id = "landTab5Content">
 							<p>"This place is like no other!" - Yair </p>
@@ -75,28 +110,13 @@
 						<div class = "landActionHour">24 hours a day</div>
 					</div>
 					<div class = "landFollow">Or we can follow up with you...</div>
-					<%= form_for @guest, url: '/services/thanks' do |f| %>
-					  <%= f.label :name %>
-					  <%= f.text_field :name, placeholder: "Tracy Harper", required: "required" %><br />					
-					  <div id="landPhoneError">Please use xxx-xxx-xxxx format</div>
-					  <%= f.label :phone %>
-					  <%= f.text_field :phone, placeholder: "xxx-xxx-xxxx", type: "tel",required: "required" %><br />					
-					  <div id="landEmailError">Please check your email.</div>
-					  <%= f.label :email %>
-					  <%= f.text_field :email,placeholder: "tracy.harper@gmail.com", type: "email", required: "required" %><br />					
-					  <%= f.label :comments %>
-					  <%= f.text_area :comments, placeholder: "(optional)", size: "20x5" %>
-					  <%= f.submit "Learn More", class: "submitButton", onclick: "return validPhone()" %>
-					<% end %>
+						<%= render 'infoForm' %>
 				</div>		
 				<div class = "clearboth"></div>
 	<%= render '/layouts/footer' %>
 			</div>
 		</div>
 	</section>
-
-
-	
 
 	<script type="text/javascript">
 		$(document).ready(function(){

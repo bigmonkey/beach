@@ -5,23 +5,78 @@
 <% end %>
 
 
+	<section>
+		<div class = "landContentBox"></div>
+		<div class = "landContent">
+			<div>		
+				<div class = "landIntro">
+					<div class = "landHead landRight normalDevice">
+						<div class = "rehab">Personalized Care</div>
+						<div>and Treatment</div>
+					</div>
+					<div class = "landHead landLeft normalDevice">
+		 				<div class = "rehab">Rehab and Detox</div>
+		 				<div>Center</div>
+					</div>
+					<div class = "landLogo">
+						<%= link_to(image_tag("http://s3.amazonaws.com/beachdata/cms/files/files/000/000/038/original/blank-logo.png"), '/') %> 
+					</div>
+				</div>		
+				<div class = "clearboth"></div>
+				<div>
+					<%= render 'sliderImages' %>
+				</div>		
+				<div class = "landDesc">
+					<div >
+						<ul id="landNav">
+							<li><a href="javascript:MenuTab(1);" id="landTab1" class="landSelected">Beachside</a></li>
+						</ul>
+					</div>				
+					<div class = "clearboth"></div>
+					<div id="landDescContent">
+						<div id = "landTab1Content" class = "landShowContent">
+							<% if @guestSaved %>
+							<p>Thanks so much for contacting us. This is a great first step to recovery and we look forward to helping you. One of our counselors will contact you shortly.</p>
+							<p>If you wish to speak with someone immediately please feel free to call us at <%= cms_snippet_content(:clickcall)%> at any time.</p>
+							<p>Learn more about <%= link_to 'Beachside Rehab', '/' %> and our personalized programs.</p>
+							<% else %>
+							<p>We were unable to save your information because,</p>
+								<ul>
+									<% @guest.errors.full_messages.each do |e| %>
+									<li><%= e %></li>
+									<% end %>
+								</ul>							
+							<p>Please make any changes and resubmit. Thank you.</p>
+							<% end %>
+						</div>	
+					</div>
+					<div class = "clearboth"></div>
+					<div class = "landIns">
+						<%= cms_snippet_content(:insurance_providers) %>
+					</div>								
+				</div>	
+				<div class = "landActionSection">
 
-<div>
-
-		<div class = "headIntro">
-			<div class = "headPhone">
-				<div class = "headNum"><%= cms_snippet_content(:clickcall)%></div>
-				<div class = "headHour">24 hours</div>
-			</div>
-			<div class = "headDesc normalDevice">
- 				<div class = "rehab"><%= link_to 'Rehab and Detox', '/center' %></div>
- 				<div><%= link_to 'Center', '/center' %></div>
-			</div>
-			<div class = "headLogo">
-				<%= link_to(image_tag("http://s3.amazonaws.com/beachdata/cms/files/files/000/000/038/original/blank-logo.png"), '/') %> 
+					<div class = "landAction">
+						<div class = "landActionPhrase"><%= "Speak with a trained counselor".titleize %></div>	
+						<div class = "landActionNum"><%= cms_snippet_content(:clickcall)%></div>
+						<div class = "landActionHour">24 hours a day</div>
+					</div>
+						<% if @guestSaved %>
+						<div class = "landSuccess">Success!</div>
+						<div>We have received your information and will contact you shortly.</div>
+						<% else %>
+						<%= render 'infoForm' %>
+						<% end %>
+				</div>		
+				<div class = "clearboth"></div>
+				<%= render '/layouts/footer' %>
 			</div>
 		</div>
+	</section>
 
-<div>Thanks. We'll contact you shortly.</div>
-
-</div>
+	<script type="text/javascript">
+		$(document).ready(function(){
+		  $('.bxslider').bxSlider();
+		});
+	</script>	

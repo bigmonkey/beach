@@ -77,6 +77,9 @@
 			margin-top: 1em;
 		}
 
+		.landSuccess {
+			margin-top: 3em;
+		}
 		#new_guest {
 			margin-top: 1em;
 			font-size: .9em;
@@ -102,7 +105,7 @@
 			margin: .2em 0;
 		}
 
-		#landPhoneError, #landEmailError{
+		#landPhoneError{
 			color: $errorColor;
 			font-size: .9;
 			display: none;
@@ -157,10 +160,35 @@
 	#landDescContent div.landShowContent {
 		display: block;
 		background: $pageBackground;
-		height: 16em;
+		height: 18em;
 		padding: .5em 1em;
 		@include rounded (.3em);
 	}	
+
+	#landDescContent {
+		table{
+			border-collapse: collapse;
+			margin: 1em auto;
+			tr th {
+				padding: 0 1em;
+				margin: 0;
+			}	
+			tr td:first-child + td {
+				text-align: center;
+			}
+			tr td:last-child {
+				text-align: center;
+				color:$landHighlight;
+			}
+			tr:last-child td{
+		 		border-bottom: dotted 1px $logoColor;
+		 	}
+		 	tr:first-child th{
+		 		border-top: dotted 1px $logoColor;
+		 		border-bottom: dotted 1px $logoColor;
+		 	}
+		} 	
+	}
 
 	.landIns{
 		color: $highlightColor;
@@ -171,7 +199,7 @@
 	}
 
 	footer {
-		margin-top: 5%;
+		margin-top: 2%;
 	}
 
 }
