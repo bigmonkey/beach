@@ -9,19 +9,20 @@
 		<div class = "landContentBox"></div>
 		<div class = "landContent">
 			<div>		
-				<div class = "headIntro">
-					<div class = "headPhone">
-						<div class = "headNum"><%= cms_snippet_content(:clickcall)%></div>
-						<div class = "headHour">24 hours</div>
+				<div class = "landIntro">
+					<div class = "landHead landRight normalDevice">
+						<div class = "rehab">Personalized Care</div>
+						<div>and Treatment</div>
 					</div>
-					<div class = "headDesc normalDevice">
-		 				<div class = "rehab"><%= link_to 'Rehab and Detox', '/center' %></div>
-		 				<div><%= link_to 'Center', '/center' %></div>
+					<div class = "landHead landLeft normalDevice">
+		 				<div class = "rehab">Rehab and Detox</div>
+		 				<div>Center</div>
 					</div>
-					<div class = "headLogo">
+					<div class = "landLogo">
 						<%= link_to(image_tag("http://s3.amazonaws.com/beachdata/cms/files/files/000/000/038/original/blank-logo.png"), '/') %> 
 					</div>
 				</div>		
+				<div class = "clearboth"></div>
 				<div>
 			    <ul class="bxslider">
 						<li><img src="http://s3.amazonaws.com/beachdata/cms/files/files/000/000/028/original/Center-1.jpg" alt=""></li>
@@ -38,7 +39,7 @@
 							<li><a href="javascript:MenuTab(2);" id="landTab2">Programs</a></li>
 							<li><a href="javascript:MenuTab(3);" id="landTab3">Center</a></li>
 							<li><a href="javascript:MenuTab(4);" id="landTab4">Compare</a></li>
-							<li><a href="javascript:MenuTab(5);" id="landTab5">Testimonials</a></li>
+							<li><a href="javascript:MenuTab(5);" id="landTab5">Comments</a></li>
 						</ul>
 					</div>				
 					<div class = "clearboth"></div>
@@ -73,16 +74,19 @@
 						<div class = "landActionNum"><%= cms_snippet_content(:clickcall)%></div>
 						<div class = "landActionHour">24 hours a day</div>
 					</div>
+					<div class = "landFollow">Or we can follow up with you...</div>
 					<%= form_for @guest, url: '/services/thanks' do |f| %>
 					  <%= f.label :name %>
-					  <%= f.text_field :name, placeholder: "Tracy Harper" %><br />					
+					  <%= f.text_field :name, placeholder: "Tracy Harper", required: "required" %><br />					
+					  <div id="landPhoneError">Please use xxx-xxx-xxxx format</div>
 					  <%= f.label :phone %>
-					  <%= f.text_field :phone, placeholder: "xxx-xxx-xxxx" %><br />					
+					  <%= f.text_field :phone, placeholder: "xxx-xxx-xxxx", type: "tel",required: "required" %><br />					
+					  <div id="landEmailError">Please check your email.</div>
 					  <%= f.label :email %>
-					  <%= f.text_field :email,placeholder: "tracy.harper@gmail.com" %><br />					
+					  <%= f.text_field :email,placeholder: "tracy.harper@gmail.com", type: "email", required: "required" %><br />					
 					  <%= f.label :comments %>
 					  <%= f.text_area :comments, placeholder: "(optional)", size: "20x5" %>
-					  <%= f.submit "Learn More", class: "submitButton" %>
+					  <%= f.submit "Learn More", class: "submitButton", onclick: "return validPhone()" %>
 					<% end %>
 				</div>		
 				<div class = "clearboth"></div>

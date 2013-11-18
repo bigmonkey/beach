@@ -7,7 +7,7 @@
 .landContentBox {
 	background: $pageBackground;
 	opacity: 0.8;
-	height: 50em;
+	height: 54em;
 	margin: 1% 0%;
 	@include rounded (.3em);
 }
@@ -16,8 +16,34 @@
 	position: relative;
 	margin: 0 7%;
 	text-align: center;	
-	top: -50em;
+	top: -54em;
 	div {margin: 0; padding: 0;}
+
+	.landIntro {
+		font-family: 'Kameron', serif;
+		margin-bottom: 1em;
+	}
+
+	.landHead{
+		text-align: center;	
+		opacity: 0.7;
+		font-size: 1.5em;
+		line-height: 1.1em;
+		color: $highlightColor;
+		.rehab { padding-top: .7em;}
+	}	
+
+	.landRight {
+		float:right;
+	}
+
+	.landLeft {
+		float: left;
+	}
+	.landLogo {
+		text-align: center;
+		img {width: 170px;}
+	}
 
 	.bx-controls {
 		display: none;
@@ -26,13 +52,13 @@
 	.landDesc {
 		float: left;
 		text-align: left;
-		width: 65%;
-		margin-top: 1em;
+		width: 60%;
+		margin-top: 1.7em;
 		padding: 0;
 	}
 
 	.landActionSection {
-		width: 35%;
+		width: 36%;
 		float: right;
 		color: $landHighlight;
 		margin-top: 2em;
@@ -41,9 +67,14 @@
 			a {font-size: 1.5em}
 			border: 1px solid $landHighlight;
 			width: 93%;
+			background: $pageBackground;
 			margin: 0 auto;
 			@include rounded (.3em);
 
+		}
+
+		.landFollow {
+			margin-top: 1em;
 		}
 
 		#new_guest {
@@ -63,12 +94,18 @@
 		.new_guest input {
 			height: 1.4em;
 			margin: .2em 0;
-			width: 13em;
+			width: 14em;
 			padding: 0 ;
 		}
 		.new_guest textarea {
-			width: 13em;
+			width: 14em;
 			margin: .2em 0;
+		}
+
+		#landPhoneError, #landEmailError{
+			color: $errorColor;
+			font-size: .9;
+			display: none;
 		}
 		input.submitButton {
 			@include rounded (.3em);
@@ -80,6 +117,13 @@
 			color: $pageBackground;
 			opacity: .8;
 		}
+
+		input.submitButton:hover {
+			background: $errorColor;
+
+			cursor: pointer;
+		}
+
 
 	}
 
@@ -100,8 +144,8 @@
 		outline: none;		
 	}
 	ul#landNav li a.landSelected {
-		border-bottom:1px solid #fff;
-		background:#fff;
+		border-bottom:1px solid $pageBackground;
+		background:$pageBackground;
 	 	border-radius: .3em .3em 0 0 ;
   	-moz-border-radius: .3em .3em 0 0 ;
   	-webkit-border-radius: .3em .3em 0 0 ;		
@@ -121,12 +165,13 @@
 	.landIns{
 		color: $highlightColor;
 		font-size: .8em;
-		margin-top: 1em;
-		img { margin: 0 1em;}
+		margin-top: 3em;
+		text-align: center;
+		img { margin: 0 .5em;}
 	}
 
 	footer {
-		margin-top: 3%;
+		margin-top: 5%;
 	}
 
 }

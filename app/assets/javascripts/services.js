@@ -9,5 +9,23 @@ function MenuTab(tab) {
 			$('#landDescContent div').removeClass('landShowContent');
 			$('#landTab'+tab+'Content').addClass('landShowContent');
 			//console.log('tab d content is', 'tab'+d+'content');
-			
+			var phoneInput = 123;
+			console.log('phone input is ', phoneInput);
 }
+
+function validPhone() {
+			document.getElementById('landPhoneError').style.display='none';
+			var phoneInput = document.getElementById('guest_phone').value;
+			var phonePattern = /^[0-9]{3}-[0-9]{3}-[0-9]{4}$/;
+
+			if (phoneInput.match(phonePattern))
+				{ return true;}
+			else
+				{
+					show = document.getElementById('landPhoneError')
+					show.style.display='block';
+				return false;	
+				}
+
+}
+
