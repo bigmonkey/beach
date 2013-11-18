@@ -160,7 +160,7 @@
 	#landDescContent div.landShowContent {
 		display: block;
 		background: $pageBackground;
-		height: 18em;
+		height: 19em;
 		padding: .5em 1em;
 		@include rounded (.3em);
 	}	
@@ -193,13 +193,13 @@
 	.landIns{
 		color: $highlightColor;
 		font-size: .8em;
-		margin-top: 3em;
+		margin-top: 2.5em;
 		text-align: center;
 		img { margin: 0 .5em;}
 	}
 
 	footer {
-		margin-top: 2%;
+		margin-top: 1%;
 	}
 
 }
