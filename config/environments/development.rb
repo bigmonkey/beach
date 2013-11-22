@@ -14,7 +14,19 @@ Beach::Application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
+
+  # Set email configuration -- Con Way add
+  config.action_mailer.default_url_options = { :host => 'localhost:8080' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'box803.bluehost.com',
+    port:                 465,
+    domain:               'beachsiderehab.com',
+    user_name:            ENV['ADMIN_EMAIL_USERNAME'],
+    password:             ENV['ADMIN_EMAIL_PW'],
+    authentication:       'plain',
+    enable_starttls_auto: true  }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
@@ -32,9 +44,9 @@ Beach::Application.configure do
     :storage => :s3,
     :s3_protocol => 'http',
     :s3_credentials => {
-      :bucket => ENV['AWS_BUCKET'],
-      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    :bucket => ENV['AWS_BUCKET'],
+    :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+    :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
     }
   }   
 end

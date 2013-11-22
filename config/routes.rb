@@ -1,5 +1,6 @@
 Beach::Application.routes.draw do
-  
+
+
   ComfortableMexicanSofa::Routing.admin(:path => '/cms-admin')
   
   match ':controller/:action', controller: /services/, via: [:get, :post]
@@ -8,7 +9,22 @@ Beach::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  #root 'homes#index'
+
+
+  authenticated :user do
+    root to: "users#index", as: :authenticated_root
+  end 
+
+  root to: 'cms_content#render_html'
+  
+  # Stops new signups. Send a message instead
+  if Rails.env == 'production'
+    devise_for :users, :controllers => { :registrations => "registrations" } 
+  else
+    devise_for :users, :controllers => { :registrations => "registrations" } 
+  end
+
+  resources :users
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
