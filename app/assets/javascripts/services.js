@@ -9,12 +9,15 @@ function MenuTab(tab) {
 			$('#landDescContent div').removeClass('landShowContent');
 			$('#landTab'+tab+'Content').addClass('landShowContent');
 			//console.log('tab d content is', 'tab'+d+'content');
-			var phoneInput = 123;
-			console.log('phone input is ', phoneInput);
+			//var phoneInput = 123;
+			//console.log('phone input is ', phoneInput);
 }
 
 function validPhone() {
-			document.getElementById('landPhoneError').style.display='none';
+			document.getElementById('phoneLabel').innerHTML = "Phone";
+			// match color to $landHighlight in custom_variables.css.scss
+			document.getElementById('phoneLabel').style.color='#003300'; 
+			console.log ('I get called all the time')
 			var phoneInput = document.getElementById('guest_phone').value;
 			var phonePattern = /^[0-9]{3}-[0-9]{3}-[0-9]{4}$/;
 
@@ -22,8 +25,9 @@ function validPhone() {
 				{ return true;}
 			else
 				{
-					show = document.getElementById('landPhoneError')
-					show.style.display='block';
+					document.getElementById('phoneLabel').innerHTML = "Phone: format is xxx-xxx-xxxx";
+					// match $errorColor in custom_variables.css.scss
+					document.getElementById('phoneLabel').style.color='#838b08';
 				return false;	
 				}
 

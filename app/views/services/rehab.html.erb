@@ -10,11 +10,11 @@
 		<div class = "landContent">
 			<div>		
 				<div class = "landIntro">
-					<div class = "landHead landRight normalDevice">
+					<div class = "landHead landRight">
 						<div class = "rehab">Personalized Care</div>
 						<div>and Treatment</div>
 					</div>
-					<div class = "landHead landLeft normalDevice">
+					<div class = "landHead landLeft landNormalDevice">
 		 				<div class = "rehab">Rehab and Detox</div>
 		 				<div>Center</div>
 					</div>
@@ -97,23 +97,23 @@
 							<p>"I loved the staff. It was great." - Con Way </p>
 						</div>				
 					</div>
-					<div class = "clearboth"></div>
-					<div class = "landIns">
-						<%= cms_snippet_content(:insurance_providers) %>
-					</div>								
+								
 				</div>	
 				<div class = "landActionSection">
 
 					<div class = "landAction">
-						<div class = "landActionPhrase"><%= "Speak with a trained counselor".titleize %></div>	
+						<div class = "landActionPhrase"><%= "Talk with a trained counselor".titleize %></div>	
 						<div class = "landActionNum"><%= cms_snippet_content(:clickcall)%></div>
 						<div class = "landActionHour">24 hours a day</div>
 					</div>
-					<div class = "landFollow">Or we can follow up with you...</div>
 						<%= render 'infoForm' %>
 				</div>		
 				<div class = "clearboth"></div>
-	<%= render '/layouts/footer' %>
+				<div class = "clearboth"></div>
+				<div class = "landIns">
+					<%= cms_snippet_content(:insurance_providers) %>
+				</div>
+				<%= render '/layouts/footer' %>
 			</div>
 		</div>
 	</section>

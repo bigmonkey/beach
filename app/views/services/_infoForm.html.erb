@@ -1,12 +1,11 @@
 <%= form_for @guest, url: '/services/thanks' do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name, placeholder: "Erin Roberts", required: "required" %><br />					
-  <div id="landPhoneError">Please use xxx-xxx-xxxx format</div>
-  <%= f.label :phone %>
+  <%= f.label :phone, id: "phoneLabel", class: "phoneError" %>
   <%= f.text_field :phone, placeholder: "xxx-xxx-xxxx", type: "tel",required: "required" %><br />					
   <%= f.label :email %>
   <%= f.text_field :email,placeholder: "erin.roberts@gmail.com", type: "email", required: "required" %><br />					
   <%= f.label :comments %>
-  <%= f.text_area :comments, placeholder: "(optional)", size: "20x5" %>
+  <%= f.text_area :comments, placeholder: "(optional)", size: "20x3" %>
   <%= f.submit "Learn More", class: "submitButton", onclick: "return validPhone()" %>
 <% end %>

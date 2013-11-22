@@ -15,10 +15,13 @@
 .landContent {
 	position: relative;
 	margin: 0 7%;
-	text-align: center;	
 	top: -54em;
 	div {margin: 0; padding: 0;}
 
+// Show/Removes "Rehab and Detox" or "Florida/FL"
+	.landNormalDevice {
+		display: inline;
+	}
 	.landIntro {
 		font-family: 'Kameron', serif;
 		margin-bottom: 1em;
@@ -53,20 +56,20 @@
 		float: left;
 		text-align: left;
 		width: 60%;
-		margin-top: 1.7em;
+		margin-top: 1.5em;
 		padding: 0;
 	}
 
 	.landActionSection {
-		width: 36%;
+		width: 15em;
 		float: right;
 		color: $landHighlight;
-		margin-top: 2em;
+		margin: 1.5em 1em 0em;
 		.landAction { 
 			font-size: 1em;
+			text-align: center;
 			a {font-size: 1.5em}
 			border: 1px solid $landHighlight;
-			width: 93%;
 			background: $pageBackground;
 			margin: 0 auto;
 			@include rounded (.3em);
@@ -74,6 +77,7 @@
 		}
 
 		.landFollow {
+			text-align: center;
 			margin-top: 1em;
 		}
 
@@ -85,39 +89,30 @@
 			font-size: .9em;
 		}
 		.new_guest label {
+			display: block;
+			margin: 0.5em 0 0;
+			padding: 0;
+			width: 100%;
 
-    width:6em;
-    height: 1.4em;
-    text-align: right;
-    margin: .2em 0;
-    display:inline-block;
-    float:left;
-    padding: 0 ;
 		}
 		.new_guest input {
-			height: 1.4em;
-			margin: .2em 0;
-			width: 14em;
-			padding: 0 ;
+			margin: 0;
+			padding: 0;
+			width: 100%;
 		}
 		.new_guest textarea {
-			width: 14em;
-			margin: .2em 0;
+			margin: 0;
 			padding: 0;
+			width:100%;
 		}
 
-		#landPhoneError{
-			color: $errorColor;
-			font-size: .9;
-			display: none;
-		}
 		input.submitButton {
 			@include rounded (.3em);
 			background: $landHighlight;
 			font-size: 1.2em;
 			height: 2.2em;	
-			width: 16em;
-			margin: .5em;
+			width: 100%;
+			margin-top: .5em;
 			color: $pageBackground;
 			opacity: .8;
 		}
@@ -161,7 +156,7 @@
 	#landDescContent div.landShowContent {
 		display: block;
 		background: $pageBackground;
-		height: 19em;
+		height: 21em;
 		padding: .5em 1em;
 		@include rounded (.3em);
 	}	
@@ -194,13 +189,122 @@
 	.landIns{
 		color: $highlightColor;
 		font-size: .8em;
-		margin-top: 2.5em;
+		margin-top: .5em;
 		text-align: center;
 		img { margin: 0 .5em;}
 	}
 
 	footer {
-		margin-top: 1%;
+		margin-top: 0%;
 	}
 
+}
+
+//landing page
+
+// destop width bewteen ipad and 1200
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+	.landContent{
+		ul#landNav li a {
+			padding:.4em 1em;
+		}
+		#landDescContent div.landShowContent {
+			height: 22em;
+		}	
+	}
+}
+
+// ipad portrait
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+	.landContent{
+		.landDesc {
+			width: 64%;
+		}		
+		.landActionSection {
+			margin: 3em 0em 0em;
+			width: 12em;
+		}
+
+		ul#landNav {
+			margin: 0 0 0 .3em;
+		}
+		ul#landNav li a {
+			padding:.4em .5em;
+		}
+		#landDescContent div.landShowContent {
+			height: 27em;
+		}
+
+	}
+
+}
+
+
+// ipad portrait landscape
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation : landscape) {
+	.landContent{
+
+		.landActionSection {
+			margin: 2em 1em 0em;
+			width: 15em;
+		}		
+		ul#landNav li a {
+			padding:.4em 1em;
+		}
+		#landDescContent div.landShowContent {
+			height: 22em;
+		}
+
+	}
+
+}
+
+//iphone 5 portrait
+
+@media only screen and (min-width: 320px) and (max-width : 568px) {
+	.landContentBox {
+		height: 84em;
+	}	
+
+
+	.landContent{	
+		top: -84em;
+
+		.landNormalDevice {
+			display: none
+		}	
+
+		.landHead {
+			font-size: .8em;
+			line-height: 1.1em;
+		} 		
+
+		.landLogo {
+			text-align: left;
+			float: left;
+			width: 45%;
+			img {width: 100%}
+		}
+
+		.landDesc {
+			width: 100%;
+		}		
+		.landActionSection {
+			margin: 3em 0em 0em;
+			width: 100%;
+		}
+
+		ul#landNav {
+			margin: 0;
+		}
+		ul#landNav li a {
+			padding:.4em .4em;
+			font-size: .7em;
+		}
+		#landDescContent div.landShowContent {
+			height: 36em;
+			font-size: .9em;
+			@include rounded (0em);
+		}		
+	}
 }
