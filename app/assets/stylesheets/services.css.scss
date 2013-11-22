@@ -20,8 +20,13 @@
 
 // Show/Removes "Rehab and Detox" or "Florida/FL"
 	.landNormalDevice {
-		display: inline;
+		display: block;
 	}
+
+	.landMobile {
+		display:	none;
+	}
+
 	.landIntro {
 		font-family: 'Kameron', serif;
 		margin-bottom: 1em;
@@ -55,26 +60,27 @@
 	.landDesc {
 		float: left;
 		text-align: left;
-		width: 60%;
+		width: 65%;
 		margin-top: 1.5em;
 		padding: 0;
 	}
+
+	.landAction { 
+		font-size: 1em;
+		text-align: center;
+		a {font-size: 1.5em}
+		border: 1px solid $landHighlight;
+		background: $pageBackground;
+		margin: 0 auto;
+		@include rounded (.3em);
+	}
+
 
 	.landActionSection {
 		width: 15em;
 		float: right;
 		color: $landHighlight;
 		margin: 1.5em 1em 0em;
-		.landAction { 
-			font-size: 1em;
-			text-align: center;
-			a {font-size: 1.5em}
-			border: 1px solid $landHighlight;
-			background: $pageBackground;
-			margin: 0 auto;
-			@include rounded (.3em);
-
-		}
 
 		.landFollow {
 			text-align: center;
@@ -259,7 +265,7 @@
 
 }
 
-//iphone 5 portrait
+//iphone and iphone 5 portrait
 
 @media only screen and (min-width: 320px) and (max-width : 568px) {
 	.landContentBox {
@@ -270,13 +276,16 @@
 	.landContent{	
 		top: -84em;
 
+		.landMobile {
+			display:block;
+		}
 		.landNormalDevice {
 			display: none
 		}	
 
 		.landHead {
-			font-size: .8em;
-			line-height: 1.1em;
+			font-size: 1em;
+			line-height: 1em;
 		} 		
 
 		.landLogo {
@@ -289,8 +298,11 @@
 		.landDesc {
 			width: 100%;
 		}		
+		.landAction{
+			margin: 1em 0em;
+		}
 		.landActionSection {
-			margin: 3em 0em 0em;
+			margin: 1em 0em 0em;
 			width: 100%;
 		}
 
@@ -305,6 +317,70 @@
 			height: 36em;
 			font-size: .9em;
 			@include rounded (0em);
+		}	
+		#landDescContent table{
+			font-size: .7em;
+			th {text-align: center;}
+		}			
+	}
+}
+
+@media only screen and (min-width: 320px) and (max-width : 568px) and (orientation : landscape) {
+	.landContentBox {
+		height: 75em;
+	}	
+
+
+	.landContent{	
+		top: -75em;
+
+		.landMobile {
+			display:block;
+		}
+		.landNormalDevice {
+			display: none
+		}	
+
+		.landHead {
+			font-size: 1.3em;
+			line-height: 1.1em;
+		} 		
+
+		.landLogo {
+			text-align: left;
+			float: left;
+			width: 45%;
+			img {width: 100%}
+		}
+
+		.landDesc {
+			width: 100%;
 		}		
+		.landAction{
+			margin: 1em 0em;
+		}
+		.landActionSection {
+			margin: 1em 0em 0em;
+			width: 100%;
+		}
+
+		ul#landNav {
+			margin: 0 0 0 1em;
+		}
+
+		ul#landNav li a {
+			padding:.4em .7em;
+			font-size: .9em;
+		}
+		#landDescContent div.landShowContent {
+			height: 25em;
+			font-size: .9em;
+			@include rounded ( .3em);
+		}
+		#landDescContent table{
+			font-size: .9em;
+			th {text-align: center;}
+		}	
+			
 	}
 }

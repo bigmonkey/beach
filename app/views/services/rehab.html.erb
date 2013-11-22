@@ -8,7 +8,12 @@
 	<section>
 		<div class = "landContentBox"></div>
 		<div class = "landContent">
-			<div>		
+			<div>
+				<div class = "landAction landMobile">
+					<div class = "landActionPhrase"><%= "Talk with a trained counselor".titleize %></div>	
+					<div class = "landActionNum"><%= cms_snippet_content(:clickcall)%></div>
+					<div class = "landActionHour">24 hours a day</div>
+				</div>		
 				<div class = "landIntro">
 					<div class = "landHead landRight">
 						<div class = "rehab">Personalized Care</div>
@@ -47,7 +52,7 @@
 							<p>Our licensed counselors care deeply about working with you on programs that include individual therapy, group therapies, relapse prevention, and family counseling. We help with individuals suffering from alcohol addiction and drug addictions such as cocaine, meth-amphetamine, crack, prescription pain-killers, and others.<p>
 							<p>Our counseling combined with nutrition and fitness programs help addicts get back to a sustained functional, and healthy lifestyle. We accept most insurance plans.</p>
 						</div>	
-						<div id = "landTab4Content">
+						<div id = "landTab4Content" class= "compareTable">
 							<table>
 								<tr>
 									<th></th>
@@ -101,7 +106,7 @@
 				</div>	
 				<div class = "landActionSection">
 
-					<div class = "landAction">
+					<div class = "landAction landNormalDevice">
 						<div class = "landActionPhrase"><%= "Talk with a trained counselor".titleize %></div>	
 						<div class = "landActionNum"><%= cms_snippet_content(:clickcall)%></div>
 						<div class = "landActionHour">24 hours a day</div>
