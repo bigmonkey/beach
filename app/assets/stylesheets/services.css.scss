@@ -222,6 +222,8 @@
 
 // ipad portrait
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
+
+
 	.landContent{
 		.landDesc {
 			width: 64%;
@@ -268,6 +270,11 @@
 //iphone and iphone 5 portrait
 
 @media only screen and (min-width: 320px) and (max-width : 568px) {
+
+	.homepage {
+	  background: url(asset-path("beachside-rehab-mobile.jpg", image) ) no-repeat center center fixed; 
+	}	
+
 	.landContentBox {
 		height: 84em;
 	}	
@@ -326,6 +333,10 @@
 }
 
 @media only screen and (min-width: 320px) and (max-width : 568px) and (orientation : landscape) {
+	.homepage {
+	  background: url(asset-path("beachside-rehab-mobile.jpg", image) ) no-repeat center center fixed; 
+	}
+
 	.landContentBox {
 		height: 75em;
 	}	
@@ -351,6 +362,69 @@
 			float: left;
 			width: 45%;
 			img {width: 100%}
+		}
+
+		.landDesc {
+			width: 100%;
+		}		
+		.landAction{
+			margin: 1em 0em;
+		}
+		.landActionSection {
+			margin: 1em 0em 0em;
+			width: 100%;
+		}
+
+		ul#landNav {
+			margin: 0 0 0 1em;
+		}
+
+		ul#landNav li a {
+			padding:.4em .7em;
+			font-size: .9em;
+		}
+		#landDescContent div.landShowContent {
+			height: 25em;
+			font-size: .9em;
+			@include rounded ( .3em);
+		}
+		#landDescContent table{
+			font-size: .9em;
+			th {text-align: center;}
+		}	
+			
+	}
+}
+
+@media only screen and (min-width: 569px) and (max-width : 767px) {
+	.homepage {
+	  background: url(asset-path("beachside-rehab-mobile.jpg", image) ) no-repeat center center fixed; 
+	}
+	.landContentBox {
+		height: 75em;
+	}	
+
+
+	.landContent{	
+		top: -75em;
+
+		.landMobile {
+			display:block;
+		}
+		.landNormalDevice {
+			display: none
+		}	
+
+		.landHead {
+			font-size: 1.3em;
+			line-height: 1.1em;
+		} 		
+
+		.landLogo {
+			text-align: left;
+			float: left;
+			width: 45%;
+			img {width: 80%}
 		}
 
 		.landDesc {
