@@ -8,9 +8,12 @@ class ServicesController < ApplicationController
 	def thanks
 
 		@guest= Guest.new(guest_params)	
-
+		
+		# if @guest not saved error messages are shown with form
 		@guest.save ? (@guestSaved = true) : (@guestSaved=false)	
 
+		# Use below for testinng
+		#@guestSaved=true
 	end
 
 	private
