@@ -68,16 +68,6 @@ Beach::Application.configure do
   # Set email configuration -- Con Way add
   config.action_mailer.default_url_options = { :host => 'beachsiderehab.com' }
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address:              'smtpout.secureserver.net',
-    port:                 465,
-    domain:               'heroku.com',
-    user_name:            ENV['ADMIN_EMAIL_USERNAME'],
-    password:             ENV['ADMIN_EMAIL_PW'],
-    authentication:       'plain',
-    ssl: true,
-    tls: true,
-    enable_starttls_auto: true  }
 
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to

@@ -19,16 +19,6 @@ Beach::Application.configure do
   # Set email configuration -- Con Way add
   config.action_mailer.default_url_options = { :host => 'localhost:8080' }
   config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    address:              'smtpout.secureserver.net',
-    port:                 465,
-    domain:               'xerpi.com',
-    user_name:            ENV['ADMIN_EMAIL_USERNAME'],
-    password:             ENV['ADMIN_EMAIL_PW'],
-    authentication:       'plain',
-    ssl: true,
-    tls: true,
-    enable_starttls_auto: true  }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
