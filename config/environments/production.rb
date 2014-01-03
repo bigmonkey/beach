@@ -71,7 +71,7 @@ Beach::Application.configure do
   config.action_mailer.smtp_settings = {
     address:              'smtpout.secureserver.net',
     port:                 465,
-    #domain:               'xerpi.com',
+    domain:               'heroku.com',
     user_name:            ENV['ADMIN_EMAIL_USERNAME'],
     password:             ENV['ADMIN_EMAIL_PW'],
     authentication:       'plain',
