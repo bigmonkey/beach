@@ -12,6 +12,9 @@ class ServicesController < ApplicationController
 		# if @guest not saved error messages are shown with form
 		@guest.save ? (@guestSaved = true) : (@guestSaved=false)	
 
+		if @guestSaved 
+			AdminMailer.inquiry_email(@guest).deliver
+		end	
 		# Use below for testinng
 		#@guestSaved=true
 	end

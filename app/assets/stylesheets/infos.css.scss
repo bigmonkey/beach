@@ -1,0 +1,15 @@
+
+.returnHome {
+	text-align: center;
+	margin: 3em auto;
+	a, a:hover, a:visited {
+		color: $logoColor;
+	}	
+}
+
+.termLink {
+	a, a:hover, a:visited {
+		color: $logoColor;
+		text-decoration: none;
+	}	
+}

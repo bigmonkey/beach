@@ -1,0 +1,13 @@
+Hi Beachside,
+We've had the following inquiry:
+
+name: <%= @guest.name %>
+phone: <%= @guest.phone %>
+email: <%= @guest.email %>
+    <% if !@guest.comments.blank? %>
+      comments:
+      <%= @guest.comments %>
+    <% end %>  
+The request came from <%= link_to 'this page','http://www.beachsiderehab.com/services/rehab' %>
+
+Con Way

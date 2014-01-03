@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>Hi Beachside,</p>
+    <p>We've had the following inquiry:</p>
+    <p>name: <%= @guest.name %></p>
+    <p>phone: <%= @guest.phone %></p>
+    <p>email: <%= @guest.email %></p>
+    <% if !@guest.comments.blank? %>
+      <p>comments:</p>
+      <p><%= @guest.comments %></p>
+    <% end %>  
+    <p>The request came from <%= link_to 'this page','http://www.beachsiderehab.com/services/rehab' %></p>
+    <p>Con Way</p>
+  </body>
+</html>
