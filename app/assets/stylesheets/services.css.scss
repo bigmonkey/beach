@@ -1,13 +1,12 @@
+
 // Place all the styles related to the Services controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import "custom_variables";
-
 .landContentBox {
 	background: $pageBackground;
 	opacity: 0.8;
-	height: 54em;
+	height: 56em;
 	margin: 1% 0%;
 	@include rounded (.3em);
 }
@@ -15,7 +14,7 @@
 .landContent {
 	position: relative;
 	margin: 0 7%;
-	top: -54em;
+	top: -56em;
 	div {margin: 0; padding: 0;}
 
 // Show/Removes "Rehab and Detox" or "Florida/FL"

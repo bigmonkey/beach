@@ -1,6 +1,7 @@
 Beach::Application.routes.draw do
 
 
+  get "infos/terms"
   ComfortableMexicanSofa::Routing.admin(:path => '/cms-admin')
   
   match ':controller/:action', controller: /services/, via: [:get, :post]
