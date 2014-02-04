@@ -192,7 +192,7 @@ nav {
 }
 
 // remove home from menu
-#menu li:first-child {
+#menu li.blankHome {
 	display: none;
 }
 
