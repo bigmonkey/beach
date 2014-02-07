@@ -155,7 +155,7 @@
   	-webkit-border-radius: .3em .3em 0 0 ;		
 	}
 
-	#landDescContent div {
+	#landDescContent div.landTab {
 		display: none;
 	}
 	#landDescContent div.landShowContent {
@@ -189,6 +189,14 @@
 		 		border-bottom: dotted 1px $logoColor;
 		 	}
 		} 	
+	}
+
+	.landGallery {
+		float: left;
+		text-align: center;
+		width: 25%;
+		font-size: .7em;
+		color: $logoColor;
 	}
 
 	.landIns{

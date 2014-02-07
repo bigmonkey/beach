@@ -36,23 +36,15 @@
 						<ul id="landNav">
 							<li><a href="javascript:MenuTab(1);" id="landTab1" class="landSelected">Beachside</a></li>
 							<li><a href="javascript:MenuTab(2);" id="landTab2">Programs</a></li>
-							<li><a href="javascript:MenuTab(4);" id="landTab4" >Compare</a></li>
-							<li><a href="javascript:MenuTab(5);" id="landTab5">Comments</a></li>
+							<li><a href="javascript:MenuTab(4);" id="landTab4" >Pictures</a></li>
+							<li><a href="javascript:MenuTab(5);" id="landTab5">Reviews</a></li>
 						</ul>
 					</div>				
 					<div class = "clearboth"></div>
 					<div id="landDescContent">
-						<div id = "landTab1Content" class = "landShowContent">
+						<div id = "landTab1Content" class = "landTab landShowContent">
 							<p>Beachside is a private, family run, drug and alcohol abuse treatment facility.</p>
-							<p>Beachside Rehab's accredited counselors focus on a holistic drug and alcohol abuse treatment approach while supporting the conventionally proven, 12 step program. We utilize mind, body, and spiritual elements throughout the treatment process to provide an enhanced recovery program for each individual. We understand that every addict’s journey towards recovery is unique and we work passionately to provide specialized treatment.</p>
-							<p>We are located on the tropical Hutchinson Island in Florida near Miami, Fort Lauderdale and West Palm Beach airports.</p>
-						</div>	
-						<div id = "landTab2Content">
-							<p>Our private, family-run facility is discreetly surrounded by the natural beauty of Hutchinson Island.<p>
-							<p>Our licensed counselors care deeply about working with you on programs that include individual therapy, group therapies, relapse prevention, and family counseling. We help with individuals suffering from alcohol addiction and drug addictions such as cocaine, meth-amphetamine, crack, prescription pain-killers, and others.<p>
-							<p>Our counseling combined with nutrition and fitness programs help addicts get back to a sustained functional, and healthy lifestyle. We accept most insurance plans.</p>
-						</div>	
-						<div id = "landTab4Content">
+							<p>Beachside Rehab's accredited counselors focus on a holistic drug and alcohol abuse treatment approach while supporting the conventionally proven, 12 step program. We utilize mind, body, and spiritual elements throughout the treatment process to provide an enhanced recovery program for each individual. We understand that every addict’s journey towards recovery is unique and we passionately provide specialized treatment.</p>
 							<table>
 								<tr>
 									<th></th>
@@ -95,22 +87,33 @@
 									<td>Yes</td>
 								</tr>																													
 							</table>
-						<p>Our staff has over 50 combined years of experience in helping addicts regain control of their lives. Call us to learn more.</p>	
+							<p>Our staff has over 50 combined years of experience in helping addicts regain control of their lives. Call us to learn more.</p>	
+
+							<p>We are located on the tropical Hutchinson Island in Florida near Miami, Fort Lauderdale and West Palm Beach airports.</p>
+						</div>	
+						<div id = "landTab2Content" class = "landTab">
+							<p>Our private, family-run facility is discreetly surrounded by the natural beauty of Hutchinson Island.<p>
+							<p>Our licensed counselors care deeply about working with you on programs that include individual therapy, group therapies, relapse prevention, and family counseling. We help with individuals suffering from alcohol addiction and drug addictions such as cocaine, meth-amphetamine, crack, prescription pain-killers, and others.<p>
+							<p>Our counseling combined with nutrition and fitness programs help addicts get back to a sustained functional, and healthy lifestyle. We accept most insurance plans.</p>
+						</div>	
+						<div id = "landTab4Content" class = "landTab">
+							<p>Our Center and Living Areas are brand new. They are warmly designed with a simple aesthetic to provide you the best environment for your recovery.</p>							
+
+							<% Cms::File.for_category('landing page gallery').each do |pic| %>
+								<div class = 'landGallery'>
+								<p><%= link_to image_tag(pic.file.url(:cms_thumb)), pic.file.url, class: 'gallery', title: pic.description %>	</br>
+<%= pic.label %></p>
+								</div>
+			        <% end %>
+			        <script>
+			            jQuery('.gallery').colorbox({rel:'gallery', transition:"none", width:"50%", height:"75%"});
+			        </script>	
+
 						</div>				
-					<div id = "landTab5Content">
-						<p>"This place is like no other!" - Yair </p>
-						<p>"I loved the staff. It was great." - Con Way </p>
-						
-
-		        <a class='gallery' href='http://s3.amazonaws.com/beachdata/cms/files/files/000/000/002/original/beachside-treatment-center.jpg'><%= image_tag "http://s3.amazonaws.com/beachdata/cms/files/files/000/000/002/cms_thumb/beachside-treatment-center.jpg" %></a>
-		        <a class='gallery' href='http://s3.amazonaws.com/beachdata/cms/files/files/000/000/002/original/beachside-treatment-center.jpg'><%= image_tag "http://s3.amazonaws.com/beachdata/cms/files/files/000/000/002/cms_thumb/beachside-treatment-center.jpg" %></a>
-		        <script>
-		            jQuery('.gallery').colorbox({rel:'gallery', transition:"none", width:"25%", height:"25%"});
-		        </script>
-
-
-
-					</div>				
+						<div id = "landTab5Content" class = "landTab">
+							<p>"This place is like no other!" - Yair </p>
+							<p>"I loved the staff. It was great." - Con Way </p>
+						</div>				
 					</div> 
 								
 				</div>	
