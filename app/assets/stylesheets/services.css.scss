@@ -289,12 +289,12 @@
 	}	
 
 	.landContentBox {
-		height: 84em;
+		height: 140em;
 	}	
 
 
 	.landContent{	
-		top: -84em;
+		top: -140em;
 
 		.landMobile {
 			display:block;
@@ -334,13 +334,17 @@
 			font-size: .7em;
 		}
 		#landDescContent div.landShowContent {
-			height: 36em;
+			height: auto;
 			font-size: .9em;
 			@include rounded (0em);
+			overflow: hidden;
 		}	
 		#landDescContent table{
 			font-size: .7em;
 			th {text-align: center;}
+		}		
+		.landGallery {
+			width: 50%;
 		}			
 	}
 }

@@ -99,15 +99,14 @@
 						</div>	
 						<div id = "landTab4Content" class = "landTab">
 							<p>Our treatment center and living areas are designed to give you the best environment for your recovery. They are warmly designed with a simple aesthetic with ample places for your to share with others as well as quiet places for your have time on your own.</p>
-							<p>Check out our pictures to see if our boutique center matches your needs.</p>							
-
+							
 							<% Cms::File.for_category('landing page gallery').each do |pic| %>
 								<div class = 'landGallery'>
 									<p><%= link_to image_tag(pic.file.url(:cms_thumb)), pic.file.url, class: 'gallery', title: pic.description %>	</br><%= pic.label %></p>
 								</div>
 			        <% end %>
 			        <script>
-			            jQuery('.gallery').colorbox({rel:'gallery', transition:"none", width:"50%", height:"75%"});
+			            jQuery('.gallery').colorbox({rel:'gallery', transition:"none", width:"<%= @gallery_width %>", height:"<%= @gallery_width %>"});
 			        </script>	
 
 						</div>				

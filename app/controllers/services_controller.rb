@@ -3,7 +3,8 @@ class ServicesController < ApplicationController
 
 	def rehab
 		@guest = Guest.new
-	end	
+		@gallery_width = (set_device == "mobile" ? "100%" : "75%")
+  end
 
 	def thanks
 
