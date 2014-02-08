@@ -223,12 +223,26 @@
 
 // destop width bewteen ipad and 1200
 @media only screen and (min-width: 1025px) and (max-width: 1200px) {
+	.landContentBox {
+		height: 80em;
+	}		
+
 	.landContent{
+		top: -80em;
+	
+		.landDesc {
+			width: 64%;
+		}		
+		.landActionSection {
+			margin: 3em 0em 0em;
+			width: 12em;
+		}
+
 		ul#landNav li a {
 			padding:.4em 1em;
 		}
 		#landDescContent div.landShowContent {
-			height: 22em;
+			height: 44em;
 		}	
 	}
 }
@@ -236,8 +250,13 @@
 // ipad portrait
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
 
+	.landContentBox {
+		height: 90em;
+	}	
 
 	.landContent{
+		top: -90em;
+
 		.landDesc {
 			width: 64%;
 		}		
@@ -253,8 +272,11 @@
 			padding:.4em .5em;
 		}
 		#landDescContent div.landShowContent {
-			height: 27em;
+			height: 58em;
 		}
+		.landGallery {
+			width: 33%;
+		}		
 
 	}
 
@@ -263,7 +285,13 @@
 
 // ipad portrait landscape
 @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation : landscape) {
-	.landContent{
+
+	.landContentBox {
+		height: 75em;
+	}	
+
+	.landContent{		
+		top: -75em;
 
 		.landActionSection {
 			margin: 2em 1em 0em;
@@ -273,7 +301,7 @@
 			padding:.4em 1em;
 		}
 		#landDescContent div.landShowContent {
-			height: 22em;
+			height: 40em;
 		}
 
 	}
@@ -355,12 +383,12 @@
 	}
 
 	.landContentBox {
-		height: 75em;
+		height: 115em;
 	}	
 
 
 	.landContent{	
-		top: -75em;
+		top: -115em;
 
 		.landMobile {
 			display:block;
@@ -401,7 +429,8 @@
 			font-size: .9em;
 		}
 		#landDescContent div.landShowContent {
-			height: 25em;
+			height: auto;
+			overflow: hidden;
 			font-size: .9em;
 			@include rounded ( .3em);
 		}
@@ -418,12 +447,12 @@
 	  background: url(asset-path("beachside-rehab-mobile.jpg", image) ) no-repeat center top; 
 	}
 	.landContentBox {
-		height: 75em;
+		height: 110em;
 	}	
 
 
 	.landContent{	
-		top: -75em;
+		top: -110em;
 
 		.landMobile {
 			display:block;
@@ -464,7 +493,8 @@
 			font-size: .9em;
 		}
 		#landDescContent div.landShowContent {
-			height: 25em;
+			height: auto;
+			overflow: hidden;
 			font-size: .9em;
 			@include rounded ( .3em);
 		}
@@ -472,6 +502,9 @@
 			font-size: .9em;
 			th {text-align: center;}
 		}	
+		.landGallery {
+			width: 33%;
+		}				
 			
 	}
 }
