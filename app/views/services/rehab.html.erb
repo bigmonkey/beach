@@ -43,8 +43,8 @@
 					<div class = "clearboth"></div>
 					<div id="landDescContent">
 						<div id = "landTab1Content" class = "landTab landShowContent">
-							<p>Beachside is a private, family run, drug and alcohol abuse treatment facility.</p>
-							<p>Beachside Rehab's accredited counselors focus on a holistic drug and alcohol abuse treatment approach while supporting the conventionally proven, 12 step program. We utilize mind, body, and spiritual elements throughout the treatment process to provide an enhanced recovery program for each individual. We understand that every addict’s journey towards recovery is unique and we passionately provide specialized treatment.</p>
+							<p>Beachside is a private, family-run, boutique, drug and alcohol abuse treatment facility.</p>
+							<p>Beachside's accredited counselors bring a holistic drug and alcohol abuse approach to the conventionally proven, 12 step program. We utilize mind, body, and spiritual elements throughout the treatment process to provide an enhanced recovery program for each individual. We understand that every addict’s journey towards recovery is unique and we passionately provide specialized treatment. Compare our center with others:</p>
 							<table>
 								<tr>
 									<th></th>
@@ -92,17 +92,18 @@
 							<p>We are located on the tropical Hutchinson Island in Florida near Miami, Fort Lauderdale and West Palm Beach airports.</p>
 						</div>	
 						<div id = "landTab2Content" class = "landTab">
-							<p>Our private, family-run facility is discreetly surrounded by the natural beauty of Hutchinson Island.<p>
-							<p>Our licensed counselors care deeply about working with you on programs that include individual therapy, group therapies, relapse prevention, and family counseling. We help with individuals suffering from alcohol addiction and drug addictions such as cocaine, meth-amphetamine, crack, prescription pain-killers, and others.<p>
-							<p>Our counseling combined with nutrition and fitness programs help addicts get back to a sustained functional, and healthy lifestyle. We accept most insurance plans.</p>
+							<p>Our private, family-run facility is discreetly surrounded by the natural beauty of Hutchinson Island. We pride ourselves in providing specialized and personalized treatment in a caring, peaceful, and supportive environment. Many of our guests do not want to leave!<p>
+							<p>Our licensed counselors care deeply about working with you on programs that include individual therapy, group therapies, relapse prevention, and family counseling. We help with individuals suffering from alcohol addiction and drug addictions including cocaine, meth-amphetamine, crack, prescription pain-killers, opiates, and others.<p>
+							<p>We understand addiction is not always the root problem such as in cases of dual diagnosis. We work with you to address the root causes like depression or ADHD. Our aim is to give you the tools to regain control of your life here and once you return to your daily world of work, bills, and other obligations. </p>
+							<p>Our counseling combined with nutrition and fitness programs help addicts get back to a sustained functional, and healthy lifestyle.</p><p>We accept insurance plans. Give us a call at <%= cms_snippet_content(:clickcall)%> and we can quickly determine your coverage.</p>
 						</div>	
 						<div id = "landTab4Content" class = "landTab">
-							<p>Our Center and Living Areas are brand new. They are warmly designed with a simple aesthetic to provide you the best environment for your recovery.</p>							
+							<p>Our treatment center and living areas are designed to give you the best environment for your recovery. They are warmly designed with a simple aesthetic with ample places for your to share with others as well as quiet places for your have time on your own.</p>
+							<p>Check out our pictures to see if our boutique center matches your needs.</p>							
 
 							<% Cms::File.for_category('landing page gallery').each do |pic| %>
 								<div class = 'landGallery'>
-								<p><%= link_to image_tag(pic.file.url(:cms_thumb)), pic.file.url, class: 'gallery', title: pic.description %>	</br>
-<%= pic.label %></p>
+									<p><%= link_to image_tag(pic.file.url(:cms_thumb)), pic.file.url, class: 'gallery', title: pic.description %>	</br><%= pic.label %></p>
 								</div>
 			        <% end %>
 			        <script>
@@ -111,9 +112,12 @@
 
 						</div>				
 						<div id = "landTab5Content" class = "landTab">
-							<p>Beachside Rehab was a life changing experience for me. I was so lost in life and my whole family had given up on me. Treatment was my last hope. I am so thankful I found Beachside. The therapy offices felt so comfortable and helped me calm down because I was so nervous. The beach houses were so comfortable I didn’t want to leave! I really enjoyed all the activities, especially the beach barbeques. My time at Beachside really helped me to find peace and open up about my issues. I really want to thank the entire staff for everything they did to help me be a better person!!!  -Karen W.</p>
-							<p>Beachside was awesome. I was such a mess when I first got there but the staff helped me to understand why my life was falling apart. They made the whole process enjoyable. I liked how the houses were actually on the beach. I love the new sober life I live now and am rebuilding the trust with all of my family members. Beachside really helped turn my life towards a better path. Thanks everyone at Beachside!  -Ryan T.</p>
-							<p>I loved Beachside! The staff, the facilities, and the program was amazing. So thankful I found this place! I highly recommend this treatment center!  - Samantha R.</p>
+							<p>Beachside Rehab was a life changing experience for me. I was so lost in life and my whole family had given up on me. Treatment was my last hope. I am so thankful I found Beachside. The therapy offices felt so comfortable and helped me calm down because I was so nervous. The beach houses were so comfortable I didn’t want to leave! I really enjoyed all the activities, especially the beach barbeques. My time at Beachside really helped me to find peace and open up about my issues. I really want to thank the entire staff for everything they did to help me be a better person!!!<p><p class = "landReviewer">Karen W.</p>
+							<div class = "clearboth"></div>
+							<p>Beachside was awesome. I was such a mess when I first got there but the staff helped me to understand why my life was falling apart. They made the whole process enjoyable. I liked how the houses were actually on the beach. I love the new sober life I live now and am rebuilding the trust with all of my family members. Beachside really helped turn my life towards a better path. Thanks everyone at Beachside!</p><p class = "landReviewer">Ryan T.</p>
+							<div class = "clearboth"></div>
+	
+							<p>I loved Beachside! The staff, the facilities, and the program was amazing. So thankful I found this place! I highly recommend this treatment center!</p><p class = "landReviewer">Samantha R.</p>
 						</div>				
 					</div> 
 								
@@ -126,12 +130,14 @@
 						<div class = "landActionHour">24 hours a day</div>
 					</div>
 						<%= render 'infoForm' %>
-				</div>		
-				<div class = "clearboth"></div>
-				<div class = "clearboth"></div>
-				<div class = "landIns">
+				<div class = "landAction landIns">
+					<div>Insurance Accepted</div>
 					<%= cms_snippet_content(:insurance_providers) %>
 				</div>
+
+				</div>		
+				<div class = "clearboth"></div>
+
 				<%= render '/layouts/footer' %>
 			</div>
 		</div>

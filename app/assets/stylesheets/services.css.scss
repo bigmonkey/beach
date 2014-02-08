@@ -6,7 +6,7 @@
 .landContentBox {
 	background: $pageBackground;
 	opacity: 0.8;
-	height: 56em;
+	height: 72em;
 	margin: 1% 0%;
 	@include rounded (.3em);
 }
@@ -14,7 +14,7 @@
 .landContent {
 	position: relative;
 	margin: 0 7%;
-	top: -56em;
+	top: -72em;
 	div {margin: 0; padding: 0;}
 
 // Show/Removes "Rehab and Detox" or "Florida/FL"
@@ -161,8 +161,8 @@
 	#landDescContent div.landShowContent {
 		display: block;
 		background: $pageBackground;
-		height: 21em;
-		padding: .5em 1em;
+		height: 36em;
+		padding: 2em 2.5em;
 		@include rounded (.3em);
 	}	
 
@@ -200,15 +200,21 @@
 	}
 
 	.landIns{
-		color: $highlightColor;
-		font-size: .8em;
-		margin-top: .5em;
+		color: $landHighlight;
+		font-size: 1.2em;
+		margin-top: 2em;
 		text-align: center;
 		img { margin: 0 .5em;}
+		div { margin: 1em 0em;}
 	}
 
+	.landReviewer {
+		color: $landHighlight;
+		float: right;
+		//margin: 0;
+	}
 	footer {
-		margin-top: 0%;
+		margin-top: 2em;
 	}
 
 }
