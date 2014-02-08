@@ -1,7 +1,7 @@
 class ServicesController < ApplicationController
 	layout 'landing_homepage'
 
-	def rehab
+	def rehab_b
 		@guest = Guest.new
 		@gallery_width = (set_device == "mobile" ? "100%" : "75%")
   end
