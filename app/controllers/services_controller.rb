@@ -9,12 +9,13 @@ class ServicesController < ApplicationController
 	def thanks
 
 		@guest= Guest.new(guest_params)	
+		refer_url = request.env["HTTP_REFERER"]
 		
 		# if @guest not saved error messages are shown with form
 		@guest.save ? (@guestSaved = true) : (@guestSaved=false)	
 
 		if @guestSaved 
-			AdminMailer.inquiry_email(@guest).deliver
+			AdminMailer.inquiry_email(@guest, refer_url).deliver
 		end	
 		# Use below for testinng
 		#@guestSaved=true
