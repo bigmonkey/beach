@@ -50,10 +50,7 @@
 							<% end %>
 						</div>	
 					</div>
-					<div class = "clearboth"></div>
-					<div class = "landIns">
-						<%= cms_snippet_content(:insurance_providers) %>
-					</div>								
+							
 				</div>	
 				<div class = "landActionSection">
 
@@ -62,12 +59,16 @@
 						<div class = "landActionNum"><%= cms_snippet_content(:clickcall)%></div>
 						<div class = "landActionHour">24 hours a day</div>
 					</div>
-						<% if @guestSaved %>
-						<div class = "landSuccess">Success!</div>
-						<div>We have received your information and will contact you shortly.</div>
-						<% else %>
-						<%= render 'infoForm' %>
-						<% end %>
+					<% if @guestSaved %>
+					<div class = "landSuccess">Success!</div>
+					<div>We have received your information and will contact you shortly.</div>
+					<% else %>
+					<%= render 'infoForm' %>
+					<% end %>
+					<div class = "landAction landIns">
+						<div>Insurance Accepted</div>
+						<%= cms_snippet_content(:insurance_providers) %>
+					</div>						
 				</div>		
 				<div class = "clearboth"></div>
 				<%= render '/layouts/footer' %>
