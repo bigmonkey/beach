@@ -4,9 +4,13 @@ Beach::Application.routes.draw do
   get "infos/terms"
   ComfortableMexicanSofa::Routing.admin(:path => '/cms-admin')
   
-  #match ':controller/:action', controller: /services/, via: [:get, :post]
+  ## LANDING PAGE ROUTES
 
-  get 'services/:kw_group/:version', to: 'services#landing_kw'
+    # route for hard coded landing page. no longer active.
+    #match ':controller/:action', controller: /services/, via: [:get, :post]
+    # route for dynamic landing pages
+    get 'services/:kw_group/:version', to: 'services#landing_kw'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

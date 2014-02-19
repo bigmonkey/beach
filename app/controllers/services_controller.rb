@@ -9,9 +9,13 @@ class ServicesController < ApplicationController
   end
 
 	def kw_groups
+		# add new kw_groups here
+		# need to add these kw's to rspec request test as well
+		# need to add partial in formate of "key_word_content.html.erb" the partial covers the first two tabs
+		# adword destination url is /services/key-word/version
 		["rehab", "detox", "dual diagnosis"]
 	end
-	
+
   def landing_kw
 		@guest = Guest.new
 
@@ -22,7 +26,7 @@ class ServicesController < ApplicationController
 		if kw_groups.include?(kw_group)
 			@kw_group = kw_group
 		else 
-			@kw_group = 'rehab'
+			@kw_group = 'rehab' # defaults to rehab if typo or something from adwords
 		end 
   end
 
