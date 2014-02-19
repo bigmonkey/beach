@@ -4,8 +4,9 @@ Beach::Application.routes.draw do
   get "infos/terms"
   ComfortableMexicanSofa::Routing.admin(:path => '/cms-admin')
   
-  match ':controller/:action', controller: /services/, via: [:get, :post]
+  #match ':controller/:action', controller: /services/, via: [:get, :post]
 
+  get 'services/:kw_group/:version', to: 'services#landing_kw'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

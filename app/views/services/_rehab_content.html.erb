@@ -1,0 +1,26 @@
+					<div id="landDescContent">
+						<div id = "landTab1Content" class = "landTab landShowContent">
+							<p>Beachside is a boutique, drug and alcohol abuse treatment facility. We are a private, family-run center.</p>
+							<p>Keyword Grouping is <%= params[:kw_group] %> and the version is <%= params[:version] %></p>
+
+							<p>Our treatment center and living areas are expressly designed to create an optimal environment for your recovery.</p>
+
+							<% Cms::File.for_category('landing page gallery').each do |pic| %>
+								<div class = 'landGallery'>
+									<p><%= link_to image_tag(pic.file.url(:cms_thumb)), pic.file.url, class: 'gallery', title: pic.description %>	</br><%= pic.label %></p>
+								</div>
+			        <% end %>
+			        <script>
+			            jQuery('.gallery').colorbox({rel:'gallery', transition:"none", width:"<%= @gallery_width %>", height:"<%= @gallery_width %>"});
+			        </script>	
+			        <div class = "clearboth"></div>
+
+							<p>Our center and living areas are designed with a warm, simple aesthetic that provides ample places for socializing with others as well as quiet places for time on your own. We specialize in providing individualized treatment in a peaceful and supportive space.</p>
+							<p>We are located on the tropical Hutchinson Island in Florida and very accessible from anywhere in the US. We are near to Miami, Fort Lauderdale and West Palm Beach airports.</p>
+						</div>	
+						<div id = "landTab2Content" class = "landTab">
+							<p>Our private, family-run facility is discreetly surrounded by the natural beauty of Hutchinson Island. We pride ourselves in providing specialized and personalized treatment in a caring, peaceful, and supportive environment. Many of our guests do not want to leave!<p>
+							<p>Our licensed counselors care deeply about working with you on programs that include individual therapy, group therapy, relapse prevention, and family counseling. We help individuals suffering from alcohol addiction and drug addictions including cocaine, meth-amphetamine, crack, prescription pain-killers, opiates, and others.<p>
+							<p>We understand addiction is not always the root problem such as in cases of dual diagnosis. We work with you to address the root causes of addiction like depression or ADHD. Our aim is to give you the tools to regain control of your life, both here and once you return to the daily world of work, bills, and other obligations. </p>
+							<p>Our counseling combined with nutrition and fitness programs helps addicts get back to a sustained, functional, and healthy lifestyle.</p><p>We accept insurance. Give us a call at <%= cms_snippet_content(:phone_ads)%> and we can quickly determine your coverage.</p>
+						</div>	

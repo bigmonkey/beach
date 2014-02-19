@@ -313,7 +313,7 @@
 @media only screen and (min-width: 320px) and (max-width : 568px) {
 
 	.homepage {
-	  background: url(asset-path("beachside-rehab-mobile.jpg", image) ) no-repeat center top; 
+	  background: url(/assets/beachside-rehab-mobile.jpg) no-repeat center top; 
 	}	
 
 	.landContentBox {
@@ -381,7 +381,7 @@
 
 @media only screen and (min-width: 320px) and (max-width : 568px) and (orientation : landscape) {
 	.homepage {
-	  background: url(asset-path("beachside-rehab-mobile.jpg", image) ) no-repeat center top; 
+	  background: url(/assets/beachside-rehab-mobile.jpg) no-repeat center top; 
 	}
 
 	.landContentBox {
@@ -446,7 +446,7 @@
 
 @media only screen and (min-width: 569px) and (max-width : 767px) {
 	.homepage {
-	  background: url(asset-path("beachside-rehab-mobile.jpg", image) ) no-repeat center top; 
+	  background: url(/assets/beachside-rehab-mobile.jpg) no-repeat center top; 
 	}
 	.landContentBox {
 		height: 110em;

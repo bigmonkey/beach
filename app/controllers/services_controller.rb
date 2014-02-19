@@ -3,7 +3,27 @@ class ServicesController < ApplicationController
 
 	def rehab_b
 		@guest = Guest.new
+
+		# @gallery_width is for js script gallery
 		@gallery_width = (set_device == "mobile" ? "100%" : "75%")
+  end
+
+	def kw_groups
+		["rehab", "detox", "dual diagnosis"]
+	end
+	
+  def landing_kw
+		@guest = Guest.new
+
+		# @gallery_width is for js script gallery
+		@gallery_width = (set_device == "mobile" ? "100%" : "75%")  
+
+		kw_group = params[:kw_group].gsub('-',' ').downcase
+		if kw_groups.include?(kw_group)
+			@kw_group = kw_group
+		else 
+			@kw_group = 'rehab'
+		end 
   end
 
 	def thanks
