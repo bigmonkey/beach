@@ -38,6 +38,10 @@
 		line-height: 1.1em;
 		color: $highlightColor;
 		.rehab { padding-top: .7em;}
+		h1.rehab { 
+			font-size: 1em;
+			margin: 0em;
+		 }
 	}	
 
 	.landRight {
@@ -139,7 +143,7 @@
 		float:left;
 	}
 	ul#landNav li a {
-		color: $highlightColor;
+		color: $landHighlight;
 		background: none;
 		display:block;
 		padding:.4em 1em;
@@ -162,11 +166,12 @@
 		display: block;
 		background: $pageBackground;
 		height: 36em;
-		padding: 2em 2.5em;
+		padding: .5em 1.5em;
 		@include rounded (.3em);
 	}	
 
 	#landDescContent {
+		h1 { color: $highlightColor }
 		table{
 			border-collapse: collapse;
 			margin: 1em auto;
@@ -211,7 +216,7 @@
 	.landReviewer {
 		color: $landHighlight;
 		float: right;
-		//margin: 0;
+		margin-bottom: .5em;
 	}
 	footer {
 		margin-top: 2em;

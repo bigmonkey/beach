@@ -20,8 +20,8 @@
 						<div>and Treatment</div>
 					</div>
 					<div class = "landHead landLeft landNormalDevice">
-		 				<div class = "rehab">Rehab and Detox</div>
-		 				<div>Center</div>
+		 				<h1 class = "rehab"><%= @kw_group.titleize %></h1>
+		 				<div>Program</div>
 					</div>
 					<div class = "landLogo">
 						<%= link_to(image_tag("http://s3.amazonaws.com/beachdata/cms/files/files/000/000/038/original/blank-logo.png"), '/') %> 
@@ -34,17 +34,30 @@
 				<div class = "landDesc">
 					<div >
 						<ul id="landNav">
-							<li><a href="javascript:MenuTab(1);" id="landTab1" class="landSelected">Beachside</a></li>
-							<li><a href="javascript:MenuTab(2);" id="landTab2">Programs</a></li>
-							<li><a href="javascript:MenuTab(4);" id="landTab4" >About</a></li>
-							<li><a href="javascript:MenuTab(5);" id="landTab5">Reviews</a></li>
+							<li><a href="javascript:MenuTab(1);" id="landTab1" class="landSelected"><%= @kw_group.titleize %></a></li>
+							<li><a href="javascript:MenuTab(2);" id="landTab2">Program</a></li>
+							<li><a href="javascript:MenuTab(4);" id="landTab4" >Reviews</a></li>
+							<li><a href="javascript:MenuTab(5);" id="landTab5">About</a></li>
 						</ul>
 					</div>				
 					<div class = "clearboth"></div>
+					<div id="landDescContent">
+
 						<%= render "#{@kw_group.gsub(' ','_')}_content" %>
+					
 						<div id = "landTab4Content" class = "landTab">
-							<p>Beachside Rehab was created to be an alternative to the large, institutional approach. Our team has found through experience that personalized care in a private, supportive environment can yield the best results for many individuals. And this is what Beachside is all about.</p>
-							<p>Beachside's accredited counselors bring a holistic drug and alcohol abuse approach to the conventionally proven, 12 step program. We utilize mind, body, and spiritual elements throughout the treatment process to provide an enhanced recovery program for each individual. We understand every addict’s journey to recovery is unique and we passionately provide specialized treatment. Compare our center with others:</p>							
+							<h2>Testimonials</h2>
+							<div>Beachside Rehab was a life changing experience for me. I was so lost in life and my whole family had given up on me. Treatment was my last hope. I am so thankful I found Beachside. The therapy offices felt so comfortable and helped me calm down because I was so nervous. The beach houses were so comfortable I didn’t want to leave! I really enjoyed all the activities, especially the beach barbecues. My time at Beachside really helped me to find peace and open up about my issues. I really want to thank the entire staff for everything they did to help me be a better person!!!</div><div class = "landReviewer">Karen W. -- Feb 2014</div>
+							<div class = "clearboth"></div>
+							<div>Beachside was awesome. I was such a mess when I first got there but the staff helped me to understand why my life was falling apart. They made the whole process enjoyable. I liked how the houses were actually on the beach. I love the new sober life I live now and am rebuilding the trust with all of my family members. Beachside really helped turn my life towards a better path. Thanks everyone at Beachside!</div><div class = "landReviewer">Ryan T. -- Feb 2014</div>
+							<div class = "clearboth"></div>
+	
+							<div>I loved Beachside! The staff, the facilities, and the program was amazing. So thankful I found this place! I highly recommend this treatment center!</div><div class = "landReviewer">Samantha R. -- Feb 2014</div>
+						</div>				
+						<div id = "landTab5Content" class = "landTab">
+							<h2>Beachside</h2>
+							<p>Beachside Rehab is an alternative to the large, institutional approach. Over the years our team has perfected a personalized program offered in a private, supportive environment that yields far superior results for many individuals. We are a private, family-run, boutique treatment center.</p>
+							<p>Beachside's accredited counselors bring a holistic drug and alcohol abuse approach to the conventionally proven, 12 step program. We passionately utilize mind, body, and spiritual elements throughout the treatment process to provide specialized treatment for each guest. Compare our center with others:</p>							
 							<table>
 								<tr>
 									<th></th>
@@ -52,7 +65,7 @@
 									<th>Beachside</th>
 								</tr>
 								<tr>
-									<td>Family Run</td>
+									<td>Privately Owned</td>
 									<td>No</td>
 									<td>Yes</td>
 								</tr>
@@ -81,23 +94,9 @@
 									<td>Yes</td>
 									<td>Yes</td>
 								</tr>
-								<tr>
-									<td>Accepts Insurance</td>
-									<td>Yes</td>
-									<td>Yes</td>
-								</tr>																													
 							</table>
-							<p>Our staff has over 50 combined years of experience in helping addicts regain control of their lives. Call us to learn more: <%= cms_snippet_content(:phone_ads)%>.</p>	
-
-
-						</div>				
-						<div id = "landTab5Content" class = "landTab">
-							<p>Beachside Rehab was a life changing experience for me. I was so lost in life and my whole family had given up on me. Treatment was my last hope. I am so thankful I found Beachside. The therapy offices felt so comfortable and helped me calm down because I was so nervous. The beach houses were so comfortable I didn’t want to leave! I really enjoyed all the activities, especially the beach barbecues. My time at Beachside really helped me to find peace and open up about my issues. I really want to thank the entire staff for everything they did to help me be a better person!!!<p><p class = "landReviewer">Karen W.</p>
-							<div class = "clearboth"></div>
-							<p>Beachside was awesome. I was such a mess when I first got there but the staff helped me to understand why my life was falling apart. They made the whole process enjoyable. I liked how the houses were actually on the beach. I love the new sober life I live now and am rebuilding the trust with all of my family members. Beachside really helped turn my life towards a better path. Thanks everyone at Beachside!</p><p class = "landReviewer">Ryan T.</p>
-							<div class = "clearboth"></div>
-	
-							<p>I loved Beachside! The staff, the facilities, and the program was amazing. So thankful I found this place! I highly recommend this treatment center!</p><p class = "landReviewer">Samantha R.</p>
+							<p>We are located on secluded part of Hutchinson Island in tropical Florida near Miami, Fort Lauderdale and West Palm Beach airports.</p>
+							<p>Call us to learn more: <%= cms_snippet_content(:phone_ads)%>.</p>	
 						</div>				
 					</div> 
 								

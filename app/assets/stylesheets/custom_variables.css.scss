@@ -5,7 +5,7 @@ $highlightColor: #00267d;
 $lightGrey: #eee;
 $mediumGrey: #ddd;
 $logoColor: #646054;
-$landHighlight: #003300;  // used on landing pages for button and highlighted text
+$landHighlight: #003300;  // Green used on landing pages for button and highlighted text
 $errorColor: #838b08; //used on form for errors
 // sets rounded corners for most browsers use @include rounded (radius)
 @mixin rounded($radius) {

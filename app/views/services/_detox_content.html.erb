@@ -1,9 +1,8 @@
-					<div id="landDescContent">
 						<div id = "landTab1Content" class = "landTab landShowContent">
-							<p>Beachside is a boutique, drug and alcohol abuse treatment facility. We are a private, family-run center.</p>
-							<p>Keyword Grouping is <%= params[:kw_group] %> and the version is <%= params[:version] %></p>
-
-							<p>Our treatment center and living areas are expressly designed to create an optimal environment for your recovery.</p>
+							<h2><%= @kw_group.titleize %> Overview</h2>
+							<p>The first step in treatment involves detox. During this phase, our professional staff determines the type of detoxification necessary. Medical detox helps to rid the body of harmful and dangerous toxins accumulated from drug and alcohol abuse.</p> 
+							<p>Unsupervised detox can be dangerous and uncomfortable. The physical challenges of detoxification often leads people to fail in their efforts when done on their own. Successful detox must be done in a safe, comfortable, and medically supervised environment.</p>
+							<p>Beachside detox is supervised by licensed clinical team who customizes each detox to our guest's needs. We make sure each client receives the best medical detox available in an environment expressly designed to help you start on your next phase of recovery and rehab.</p>
 
 							<% Cms::File.for_category('landing page gallery').each do |pic| %>
 								<div class = 'landGallery'>
@@ -13,14 +12,20 @@
 			        <script>
 			            jQuery('.gallery').colorbox({rel:'gallery', transition:"none", width:"<%= @gallery_width %>", height:"<%= @gallery_width %>"});
 			        </script>	
-			        <div class = "clearboth"></div>
-
-							<p>Our center and living areas are designed with a warm, simple aesthetic that provides ample places for socializing with others as well as quiet places for time on your own. We specialize in providing individualized treatment in a peaceful and supportive space.</p>
-							<p>We are located on the tropical Hutchinson Island in Florida and very accessible from anywhere in the US. We are near to Miami, Fort Lauderdale and West Palm Beach airports.</p>
 						</div>	
 						<div id = "landTab2Content" class = "landTab">
-							<p>Our private, family-run facility is discreetly surrounded by the natural beauty of Hutchinson Island. We pride ourselves in providing specialized and personalized treatment in a caring, peaceful, and supportive environment. Many of our guests do not want to leave!<p>
-							<p>Our licensed counselors care deeply about working with you on programs that include individual therapy, group therapy, relapse prevention, and family counseling. We help individuals suffering from alcohol addiction and drug addictions including cocaine, meth-amphetamine, crack, prescription pain-killers, opiates, and others.<p>
-							<p>We understand addiction is not always the root problem such as in cases of dual diagnosis. We work with you to address the root causes of addiction like depression or ADHD. Our aim is to give you the tools to regain control of your life, both here and once you return to the daily world of work, bills, and other obligations. </p>
-							<p>Our counseling combined with nutrition and fitness programs helps addicts get back to a sustained, functional, and healthy lifestyle.</p><p>We accept insurance. Give us a call at <%= cms_snippet_content(:phone_ads)%> and we can quickly determine your coverage.</p>
+							<h2><%= @kw_group.titleize %> Program</h2>
+							<p>Detox is not the same for each individual. Multiple factors determine the type of medical detox that is necessary, including, the type of drugs abused, history of drug use, and how frequently it was used.</p>
+							<p>During detoxification, when the use of drugs or alcohol is abruptly stopped the body experiences physical discomfort know as withdrawal symptoms. Withdrawal symptoms from detox vary depending on a person's level of dependency and may include, 
+								<ul>
+									<li>Nausea, Shakes, Night Sweats</li>
+									<li>Fatigue, Depression</li>
+									<li>Anxiety, Rapid Heart Beat</li>
+									<li>Convulsions, Seizures</li>
+									<li>Hallucinations, Blackouts</li>
+									<li>Death</li>
+								</ul>
+							</p>
+							<p>Our licensed, clinical team guides our guests through medical detox in a safe, comfortable, and supervised environment. The customized treatments provide our clients with the best medical detox available helping them complete the first phase on their path to recovery as comfortably and effectively as is possible.</p>
+							<p>We accept insurance. Call us at <%= cms_snippet_content(:phone_ads)%> and we can quickly determine your coverage.</p>
 						</div>	
