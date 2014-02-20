@@ -7,6 +7,7 @@ Beach::Application.routes.draw do
   ## LANDING PAGE ROUTES
 
     # route for hard coded landing page. no longer active.
+    get 'services/rehab_b', to: 'services#rehab_b'
     #match ':controller/:action', controller: /services/, via: [:get, :post]
     # route for dynamic landing pages
     get 'services/:kw_group/:version', to: 'services#landing_kw'
