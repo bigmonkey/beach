@@ -15,7 +15,7 @@ describe "Custom Landing Pages" do
           #binding.pry
         }
         it { should have_title "#{kw.titleize} Programs | Beachside Rehab" }   
-        it { should have_css("meta[name='description'][content='Beachside Rehab is a family-run, world-class center on a Florida beach offering #{kw} treatment programs.']", visible: false) }      
+        it { should have_css("meta[name='description'][content='Beachside Rehab provides personalized #{kw} treatment at its world-class center on a Florida beach.']", visible: false) }      
       end
     end
 
@@ -25,7 +25,7 @@ describe "Custom Landing Pages" do
       }
       # a word not listed in kw_groups should default to rehab 
       it { should have_title 'Rehab Programs | Beachside Rehab' }   
-      it { should have_css("meta[name='description'][content='Beachside Rehab is a family-run, world-class center on a Florida beach offering rehab treatment programs.']", visible: false) }      
+      it { should have_css("meta[name='description'][content='Beachside Rehab provides personalized rehab treatment at its world-class center on a Florida beach.']", visible: false) }      
     end
 
 
