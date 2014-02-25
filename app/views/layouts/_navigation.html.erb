@@ -1,7 +1,10 @@
+<%
+# in navigation menu replace '#' with page.full_path to have main nav heads link to page
+%>
 <nav>
 	<ul id = "menu">
 		<% @cms_site.pages.root.children.published.each_with_index do |page, index| %>
-			<li <%= "class = blankHome" if index == 0 %>><%= link_to page.label, page.full_path, id: page.slug+"-nav" %>
+			<li <%= "class = blankHome" if index == 0 %>><%= link_to page.label, '#', id: page.slug+"-nav" %>
 			<% if page.children_count > 0 %>		
 				<ul>
 					<% @cms_site.pages.published.each do |subpage| %>
