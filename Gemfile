@@ -35,7 +35,7 @@ end
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the app server in production heroku and ubuntu
-gem 'unicorn','4.7.0'
+gem 'unicorn','4.8.2'
 #gem 'thin','1.6.0'
 gem "execjs", '2.0.2'
 gem 'therubyracer', :platform => 'ruby'
