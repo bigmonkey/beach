@@ -4,14 +4,8 @@
 							<p>Dual diagnosis treatment can be complex. Even though the mental illness was present before the addiction in most dual diagnosis clients it is not advisable to treat the mental illness separately from the addiction. Individual problems are now rooted in both areas so treatment must be coordinated and customized to the guest.</p>
 							<p>Beachside's advanced rehab program understands dual diagnosis treatment is not straight forward and provides guests the tools and environment to effectively treat both your mental illness and addiction simultaneously.</p>
 
-							<% Cms::File.for_category('landing page gallery').each do |pic| %>
-								<div class = 'landGallery'>
-									<p><%= link_to image_tag(pic.file.url(:cms_thumb)), pic.file.url, class: 'gallery', title: pic.description %>	</br><%= pic.label %></p>
-								</div>
-			        <% end %>
-			        <script>
-			            jQuery('.gallery').colorbox({rel:'gallery', transition:"none", width:"<%= @gallery_width %>", height:"<%= @gallery_width %>"});
-			        </script>	
+							<%= render '/shared/photo_gallery' %>
+							
 						</div>	
 						<div id = "landTab2Content" class = "landTab">
 							<h2><%= @kw_group.titleize %> Program</h2>

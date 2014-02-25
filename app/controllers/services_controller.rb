@@ -1,5 +1,5 @@
 class ServicesController < ApplicationController
-	layout 'landing_homepage'
+	layout 'landing_page'
 
 	def rehab_b
 		@guest = Guest.new

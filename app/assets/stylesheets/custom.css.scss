@@ -273,6 +273,10 @@ nav {
     border-radius: 0 0 5px 5px;
 }
 
+#menu ul li:only-child a{
+	  @include rounded (5px);
+}
+
 /* Clear floated elements */
 #menu:after{
 	visibility: hidden;

@@ -32,3 +32,11 @@ img.cmsImageLeft {
 	padding-right: 2.5em;	
 }
 
+// for photo gallery
+.cms 	.photoGallery {
+		float: left;
+		text-align: center;
+		width: 25%;
+		font-size: .7em;
+		color: $logoColor;
+	}

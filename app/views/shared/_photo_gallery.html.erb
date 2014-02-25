@@ -1,0 +1,8 @@
+	<% Cms::File.for_category('landing page gallery').each do |pic| %>
+		<div class = 'photoGallery'>
+			<p><%= link_to image_tag(pic.file.url(:cms_thumb)), pic.file.url, class: 'gallery', title: pic.description %>	</br><%= pic.label %></p>
+		</div>
+  <% end %>
+  <script>
+      jQuery('.gallery').colorbox({rel:'gallery', transition:"none", width:"<%= @gallery_width %>", height:"<%= @gallery_width %>"});
+  </script>	

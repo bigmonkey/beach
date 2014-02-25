@@ -4,14 +4,8 @@
 							<p>The demand for drug rehab has grown drastically in recent years as people seek freedom from their addiction and realize the success rate for self rehab is extremely low. Successful rehab generally requires a support team and nurturing environment.</p>
 							<p>Beachside drug rehab provides addicts this support as well as long-term tools to regain control of their lives and to build a life free from drug use. Our licensed counselors create programs tailored to the needs of each guest. Our treatment center and living areas are expressly designed to create an optimal environment for your rehab.</p>
 
-							<% Cms::File.for_category('landing page gallery').each do |pic| %>
-								<div class = 'landGallery'>
-									<p><%= link_to image_tag(pic.file.url(:cms_thumb)), pic.file.url, class: 'gallery', title: pic.description %>	</br><%= pic.label %></p>
-								</div>
-			        <% end %>
-			        <script>
-			            jQuery('.gallery').colorbox({rel:'gallery', transition:"none", width:"<%= @gallery_width %>", height:"<%= @gallery_width %>"});
-			        </script>	
+							<%= render '/shared/photo_gallery' %>
+								
 						</div>	
 						<div id = "landTab2Content" class = "landTab">
 							<h2><%= @kw_group.titleize %> Program</h2>
