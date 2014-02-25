@@ -33,10 +33,17 @@ img.cmsImageLeft {
 }
 
 // for photo gallery
-.cms 	.photoGallery {
+.cms {
+ 	.photoGallery {
 		float: left;
 		text-align: center;
 		width: 25%;
 		font-size: .7em;
 		color: $logoColor;
 	}
+	.testimonialReviewer {
+		color: $landHighlight;
+		float: right;
+		margin-bottom: .5em;
+	}	
+}	
