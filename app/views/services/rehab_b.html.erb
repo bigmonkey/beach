@@ -48,7 +48,7 @@
 							<p>Our treatment center and living areas are expressly designed to create an optimal environment for your recovery.</p>
 							
 							<% Cms::File.for_category('landing page gallery').each do |pic| %>
-								<div class = 'landGallery'>
+								<div class = 'photoGallery'>
 									<p><%= link_to image_tag(pic.file.url(:cms_thumb)), pic.file.url, class: 'gallery', title: pic.description %>	</br><%= pic.label %></p>
 								</div>
 			        <% end %>
