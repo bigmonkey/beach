@@ -7,12 +7,6 @@
 
 	<%= render '/layouts/header_tags' %>
 
-	<script>
-		$(document).ready(function(){
-		  $('.bxslider').bxSlider();
-		  $( '#nav li:has(ul)' ).doubleTapToGo();
-		});
-	</script>		
 </head>
 
 <body id = "<%= cms_page_content(:navId)%>" class = "cms">
@@ -45,6 +39,11 @@
 	<div class="clearboth"></div>
 	<%= render '/layouts/footer' %>
 
-
+	<script>
+		$(document).ready(function(){
+		  $('.bxslider').bxSlider();
+		  $( '#nav li:has(ul)' ).doubleTapToGo();
+		});
+	</script>		
 </body>
 </html>
