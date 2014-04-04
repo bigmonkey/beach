@@ -79,6 +79,20 @@
 		display: block;
 		margin: 0 auto;
 	}
+
+.cmsStaffBio {
+	.cmsStaffDesc {
+		float: none;
+		width: 100%;
+	}
+}
+img.cmsImageStaff {
+	float: none;
+	padding-right: 0em;
+	display: block;
+	margin: 0em  auto 1em;
+	width: 100%;
+}	
 	// iframe for contact
 	.cmsContentLeft {
 		padding-right: 0em;
@@ -175,6 +189,20 @@
 		display: block;
 		margin: 0 auto;
 	}
+	
+.cmsStaffBio {
+	.cmsStaffDesc {
+		float: none;
+		width: 100%;
+	}
+}
+img.cmsImageStaff {
+	float: none;
+	padding-right: 0em;
+	display: block;
+	margin: 0em auto 1em;
+	width: 100%;
+}	
 	// iframe for contact
 	.cmsContentLeft {
 		padding-right: .5em;
@@ -241,6 +269,13 @@
 		display: block;
 		margin: 0 auto;
 	}
+
+.cmsStaffBio {
+	.cmsStaffDesc {
+		width: 70%;
+	}
+}
+
 	// homepage
 	.homeContentBox{
 		margin: 10%;
@@ -279,6 +314,12 @@
 			img {width: 15%}
 		}	
 	}		
+
+.cmsStaffBio {
+	.cmsStaffDesc {
+		width: 75%;
+	}
+}
 
 }
 
