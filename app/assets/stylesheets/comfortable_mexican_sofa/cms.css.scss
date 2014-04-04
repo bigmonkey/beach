@@ -26,6 +26,32 @@ img.cmsImageLeft {
 	padding-right: 2.5em;
 }
 
+.cmsStaffBio {
+	margin: 0em 0em;
+	h2 {
+		size: 2.0em;
+		margin-bottom: 0em;
+	}
+	h3 {
+		font-size: .75em;
+		color: $highlightColor
+	}
+	.cmsStaffDesc {
+		float: right;
+		width: 80%;
+	}
+}
+img.cmsImageStaff {
+	float: left;
+	padding-right: 2.5em;
+
+}
+
+.cmsStaffSpacer {
+	height: 2.5em;
+	clear:both
+}
+
 // iframe for contact
 .cmsContentLeft {
 	float: left;

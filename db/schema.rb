@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20131121223755) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "cms_blocks", force: true do |t|
     t.integer  "page_id",    null: false
     t.string   "identifier", null: false

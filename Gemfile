@@ -7,7 +7,7 @@ gem 'rails', '4.0.2'
 gem 'pg', '0.17.0'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '4.0.1'
+gem 'sass-rails', '4.0.2'
 gem 'coffee-rails', '4.0.1'
 
 # Use Uglifier as compressor for JavaScript assets
@@ -41,6 +41,7 @@ gem "execjs", '2.0.2'
 gem 'therubyracer', :platform => 'ruby'
 
 # Add CMS
+gem 'paperclip', '3.5.2'
 gem 'comfortable_mexican_sofa', '1.9.0'
 
 # Used by CMS via paperclip to store onto AWS S3

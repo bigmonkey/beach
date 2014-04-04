@@ -3,7 +3,7 @@
 ComfortableMexicanSofa.configure do |config|
   # Title of the admin area
   #   config.cms_title = 'ComfortableMexicanSofa CMS Engine'
-  
+
   # Controller that is inherited from CmsAdmin::BaseController
   #   config.base_controller = 'ApplicationController'
 
@@ -59,7 +59,7 @@ ComfortableMexicanSofa.configure do |config|
   # Admin interface will respect the locale of the site being managed. However you can
   # force it to English by setting this to `:en`
   #   config.admin_locale = nil
-  
+
   # If you want to keep your CMS tables in a location other than the default database
   # add a database_config. For example, setting it to 'cms' will look for a cms_#{Rails.env}
   # definition in your database.yml file
@@ -88,6 +88,10 @@ ComfortableMexicanSofa.configure do |config|
   # Default is nil (not used)
   #   config.hostname_aliases = nil
 
+  # Reveal partials that can be overwritten in the admin area.
+  # Default is false.
+  #   config.reveal_cms_partials = false
+
 end
 
 # Default credentials for ComfortableMexicanSofa::HttpAuth
@@ -95,9 +99,10 @@ end
 ComfortableMexicanSofa::HttpAuth.username = ENV['CMS_USERNAME']
 ComfortableMexicanSofa::HttpAuth.password = ENV['CMS_PASSWORD']
 
-# If you need to inject some html in cms admin views you can define what partial
-# should be rendered into the following areas:
-#   ComfortableMexicanSofa::ViewHooks.add(:header, '/layouts/admin/header')
-#   ComfortableMexicanSofa::ViewHooks.add(:navigation, '/layouts/admin/navigation')
-#   ComfortableMexicanSofa::ViewHooks.add(:html_head, '/layouts/admin/html_head')
-#   ComfortableMexicanSofa::ViewHooks.add(:page_form, '/layouts/admin/page_form')
+# You can use bcrypt (gem 'bcrypt-ruby') if you want to:
+#   require 'bcrypt'
+#   ComfortableMexicanSofa::HttpAuth.username = 'username'
+#   ComfortableMexicanSofa::HttpAuth.password = BCrypt::Password.new '... bcrypt hash ...'
+#
+# To create a bcrypt hash:
+#   BCrypt::Password.create('password').to_s
