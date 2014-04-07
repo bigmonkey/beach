@@ -11,7 +11,7 @@ Beach::Application.routes.draw do
     #match ':controller/:action', controller: /services/, via: [:get, :post]
     # route for dynamic landing pages
     get 'services/:kw_group/:version', to: 'services#landing_kw'
-
+    post 'services/thanks', to: 'services#thanks'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
