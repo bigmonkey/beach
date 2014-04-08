@@ -80,25 +80,36 @@
 		margin: 0 auto;
 	}
 
-.cmsStaffBio {
-	.cmsStaffDesc {
-		float: none;
-		width: 100%;
+	.cmsStaffBio {
+		.cmsStaffDesc {
+			float: none;
+			width: 100%;
+		}
 	}
-}
-img.cmsImageStaff {
-	float: none;
-	padding-right: 0em;
-	display: block;
-	margin: 0em  auto 1em;
-	width: 100%;
-}	
-	// iframe for contact
-	.cmsContentLeft {
+	img.cmsImageStaff {
+		float: none;
 		padding-right: 0em;
-		float:none;
+		display: block;
+		margin: 0em  auto 1em;
+		width: 100%;
 	}	
 
+
+	.cmsClearWhenStacked{
+		clear:both;
+	}
+	.cmsContentLeft {
+		width: auto;
+		float: none;
+		.photoGallery {
+			width: 33%;
+		}		
+	}
+
+	.cmsSideBarRight {
+		width: auto;
+		float: none;
+	}
 	// homepage
 	.homeContentBox{
 		margin: 10%;
@@ -190,26 +201,35 @@ img.cmsImageStaff {
 		margin: 0 auto;
 	}
 	
-.cmsStaffBio {
-	.cmsStaffDesc {
-		float: none;
-		width: 100%;
+	.cmsStaffBio {
+		.cmsStaffDesc {
+			float: none;
+			width: 100%;
+		}
 	}
-}
-img.cmsImageStaff {
-	float: none;
-	padding-right: 0em;
-	display: block;
-	margin: 0em auto 1em;
-	width: 100%;
-}	
-	// iframe for contact
-	.cmsContentLeft {
-		padding-right: .5em;
+	img.cmsImageStaff {
 		float: none;
-		text-align: center;
+		padding-right: 0em;
+		display: block;
+		margin: 0em auto 1em;
+		width: 100%;
 	}	
 
+	.cmsClearWhenStacked{
+		clear:both;
+	}
+	.cmsContentLeft {
+		width: auto;
+		float: none;
+		.photoGallery {
+			width: 33%;
+		}				
+	}
+
+	.cmsSideBarRight {
+		width: auto;
+		float: none;
+	}
 	// homepage
 	.homeContentBox{
 		margin: 5% 5%;
@@ -270,12 +290,17 @@ img.cmsImageStaff {
 		margin: 0 auto;
 	}
 
-.cmsStaffBio {
-	.cmsStaffDesc {
-		width: 70%;
+	.cmsStaffBio {
+		.cmsStaffDesc {
+			width: 70%;
+		}
 	}
-}
-
+	.cmsContentLeft {
+		width: 50%;
+		.photoGallery {
+			width: 33%;
+		}				
+	}
 	// homepage
 	.homeContentBox{
 		margin: 10%;
@@ -300,6 +325,18 @@ img.cmsImageStaff {
   margin: 1% 5%;
 	}  
 
+	.cmsStaffBio {
+		.cmsStaffDesc {
+			width: 75%;
+		}
+	}
+	.cmsContentLeft {
+		width: 60%;
+		.photoGallery {
+			width: 33%;
+		}				
+	}
+
 	// homepage
 	.homeContentBox{
 		margin: 10%;
@@ -314,12 +351,5 @@ img.cmsImageStaff {
 			img {width: 15%}
 		}	
 	}		
-
-.cmsStaffBio {
-	.cmsStaffDesc {
-		width: 75%;
-	}
-}
-
 }
 

@@ -32,12 +32,12 @@ img.cmsImageLeft {
 // creates two columns for CMS. content on left and sidebar on right
 .cmsContentLeft {
 	float: left;
-	width: 60%;
+	width: 70%;
 }
 
 .cmsSideBarRight {
 	float: right;
-	width: 20%;
+	width: 13em;
 
 	.cmsBlurb {
 		background: $lightGrey;
@@ -62,29 +62,39 @@ img.cmsImageLeft {
 		a.clickCall {
  			font-size: 1.5em;
 		}
+	
+		h3, h4 {
+			font-family: 'Kameron',serif;
+			text-align: center;
+			color: $logoColor;	
+		}
+		h3 {
+			font-size: 2em;
+			line-height: 1em;
+		}
+		h4 {
+			font-size: .8em;
+			line-height: .7em;
+			padding-bottom: 1em;
+			margin-bottom: 1em;
+			border-bottom: solid 1px $mediumGrey;
+		}
+	}
 
-	}
-	h3, h4 {
-		font-family: 'Kameron',serif;
-		text-align: center;
-		color: $logoColor;	
-	}
-	h3 {
-		font-size: 2em;
-		line-height: 1em;
-	}
-	h4 {
-		font-size: .8em;
-		line-height: .7em;
-		padding-bottom: 1em;
-		margin-bottom: 1em;
-		border-bottom: solid 1px $mediumGrey;
-	}
+	.cmsSideBarForm {
+		background: $lightGrey;
+		padding: .5em;
+		margin: 1em 0em;
+
+		h3 {
+			text-align: center;
+		}
 
 // contact form
 		#new_guest {
 			margin-top: 1em;
-			font-size: .9em;
+			font-size: .8em;
+
 		}
 		.new_guest label {
 			display: block;
@@ -120,6 +130,7 @@ img.cmsImageLeft {
 
 			cursor: pointer;
 		}
+	}	
 }
 
 
@@ -153,11 +164,6 @@ img.cmsImageStaff {
 	clear:both
 }
 
-// iframe for contact
-.cmsContentLeft {
-	float: left;
-	padding-right: 2.5em;	
-}
 
 // for photo gallery
 .cms {
