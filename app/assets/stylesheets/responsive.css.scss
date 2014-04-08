@@ -12,7 +12,7 @@
 		margin:	0 5%;
 	}
 	section {
-  margin: 1% 5%;
+  margin: 3% 5%;
 	}
 	.menuLine{
 	  display: none;
@@ -122,6 +122,10 @@
 		.homePhone a.clickCall {font-size: 1.5em;}
 		.homeInsLogo {display: none;}
 	}
+	.cmsGoogleMapIframe {
+		float: none;
+		padding-right: 0em;
+	}	
 }
 
 /* Wider Smartphone Portrait and Landscape */
@@ -131,7 +135,7 @@
 		margin:	0 5%;
 	}
 	section {
-  margin: 1% 5%;
+  margin: 2% 5%;
 	}
 	.menuLine{
 	  display: none;
@@ -242,6 +246,11 @@
 		.homePhone a.clickCall {font-size: 1.7em;}
 		.homeInsLogo {display:none}
 	}	
+
+	.cmsGoogleMapIframe {
+		float: none;
+		padding-right: 0em;
+	}		
 }	
 
 // Larger Smart Phone Landscape
@@ -250,7 +259,7 @@
 		margin:	0 5%;
 	}
 	section {
-  margin: 1% 5%;
+  margin: 2% 5%;
 	}
 	.menuLine{
 		border-bottom: .15em solid $highlightColor;
@@ -296,7 +305,7 @@
 		}
 	}
 	.cmsContentLeft {
-		width: 50%;
+		width: 60%;
 		.photoGallery {
 			width: 33%;
 		}				
@@ -322,7 +331,7 @@
 		margin:	0 5%;
 	}
 	section {
-  margin: 1% 5%;
+  margin: 2% 5%;
 	}  
 
 	.cmsStaffBio {

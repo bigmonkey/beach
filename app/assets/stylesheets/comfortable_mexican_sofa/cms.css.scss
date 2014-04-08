@@ -32,7 +32,7 @@ img.cmsImageLeft {
 // creates two columns for CMS. content on left and sidebar on right
 .cmsContentLeft {
 	float: left;
-	width: 70%;
+	width: 75%;
 }
 
 .cmsSideBarRight {
@@ -71,13 +71,16 @@ img.cmsImageLeft {
 		h3 {
 			font-size: 2em;
 			line-height: 1em;
+			padding-bottom: .3em;
+			margin-bottom: .4em;
+			border-bottom: solid 1px $mediumGrey;			
 		}
 		h4 {
 			font-size: .8em;
 			line-height: .7em;
-			padding-bottom: 1em;
-			margin-bottom: 1em;
-			border-bottom: solid 1px $mediumGrey;
+			//padding-bottom: 1em;
+			//margin-bottom: 1em;
+			//border-bottom: solid 1px $mediumGrey;
 		}
 	}
 
@@ -88,6 +91,7 @@ img.cmsImageLeft {
 
 		h3 {
 			text-align: center;
+			color: $highlightColor;
 		}
 
 // contact form
@@ -101,7 +105,7 @@ img.cmsImageLeft {
 			margin: 0.5em 0 0;
 			padding: 0;
 			width: 100%;
-
+			color: $highlightColor;
 		}
 		.new_guest input {
 			margin: 0;
@@ -149,7 +153,7 @@ img.cmsImageLeft {
 	}
 	.cmsStaffDesc {
 		float: right;
-		width: 80%;
+		width: 75%;
 	}
 }
 img.cmsImageStaff {
@@ -180,3 +184,9 @@ img.cmsImageStaff {
 		margin-bottom: .5em;
 	}	
 }	
+
+// google map iframe
+.cmsGoogleMapIframe {
+	float: left;
+	padding-right: 1.5em;
+}
