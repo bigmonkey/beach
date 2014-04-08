@@ -7,6 +7,9 @@
 }
 */
 
+.cmsBlank {
+	display: none;
+}
 .imageWide img {
   max-width: 100%;
   background-size: cover;
@@ -26,6 +29,103 @@ img.cmsImageLeft {
 	padding-right: 2.5em;
 }
 
+// creates two columns for CMS. content on left and sidebar on right
+.cmsContentLeft {
+	float: left;
+	width: 60%;
+}
+
+.cmsSideBarRight {
+	float: right;
+	width: 20%;
+
+	.cmsBlurb {
+		background: $lightGrey;
+		padding: 1em 1em .3em;
+
+		p {
+			font-size: .8em;
+			text-align: center;
+
+
+			a:link, a:visited {
+		  vertical-align: middle;
+		  text-decoration: none;
+		  color: $logoColor;
+			}
+
+			a:hover, a:active {
+				color: $highlightColor;
+			}
+		}
+
+		a.clickCall {
+ 			font-size: 1.5em;
+		}
+
+	}
+	h3, h4 {
+		font-family: 'Kameron',serif;
+		text-align: center;
+		color: $logoColor;	
+	}
+	h3 {
+		font-size: 2em;
+		line-height: 1em;
+	}
+	h4 {
+		font-size: .8em;
+		line-height: .7em;
+		padding-bottom: 1em;
+		margin-bottom: 1em;
+		border-bottom: solid 1px $mediumGrey;
+	}
+
+// contact form
+		#new_guest {
+			margin-top: 1em;
+			font-size: .9em;
+		}
+		.new_guest label {
+			display: block;
+			margin: 0.5em 0 0;
+			padding: 0;
+			width: 100%;
+
+		}
+		.new_guest input {
+			margin: 0;
+			padding: 0;
+			width: 100%;
+		}
+		.new_guest textarea {
+			margin: 0;
+			padding: 0;
+			width:100%;
+		}
+
+		input.submitButton {
+			//@include rounded (.3em);
+			background: $landHighlight;
+			font-size: 1.2em;
+			height: 2.2em;	
+			width: 100%;
+			margin-top: .5em;
+			color: $pageBackground;
+			opacity: .8;
+		}
+
+		input.submitButton:hover {
+			background: $errorColor;
+
+			cursor: pointer;
+		}
+}
+
+
+
+
+// staff pages for pictures and bios
 .cmsStaffBio {
 	margin: 0em 0em;
 	h2 {

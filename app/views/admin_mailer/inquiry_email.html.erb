@@ -13,7 +13,7 @@
       <p>comments:</p>
       <p><%= @guest.comments %></p>
     <% end %>  
-    <p>The request came from <%= link_to 'this page', @refer_url %></p>
+    <p>The request came from <%= link_to @refer_url, @refer_url %></p>
     <p>Con Way</p>
   </body>
 </html>

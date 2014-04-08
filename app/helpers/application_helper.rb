@@ -18,6 +18,12 @@ module ApplicationHelper
 			
 	end
 
+	# used for CMS to set variable for information form
+	# it's called inside the CMS using {{ cms:helper:set_guest }}
+	def set_guest
+		@guest= Guest.new
+	end
+
 
 	#this is used to get the device type for the image gallery
 	#tablet regex from https://github.com/benlangfeld/mobile-fu/blob/master/lib/mobile-fu/tablet.rb

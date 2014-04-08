@@ -1,6 +1,7 @@
 /*
 	By Osvaldas Valutis, www.osvaldas.info
 	Available for use under the MIT License
+	http://osvaldas.info/drop-down-navigation-responsive-and-touch-friendly
 */
 
 
